@@ -1,0 +1,280 @@
+A AGT mantém no seu portal áreas específicas para *Regime Jurídico das Facturas e Documentos Equivalentes, legislação, circulares, instrutivos e *“Tipografias / Gráficas e Programas Validados”**. ([AGT][1])
+
+## ✅ Checklist AGT / SAF-T AO
+
+### 1. Identificação fiscal da empresa
+
+* [ ] NIF da empresa correctamente configurado.
+* [ ] Nome/denominação fiscal correcto.
+* [ ] Morada fiscal correcta.
+* [ ] Dados de contacto/configuração fiscal.
+* [ ] Regime tributário aplicável correctamente configurado.
+* [ ] Dados fiscais utilizados na factura são os mesmos usados na exportação.
+* [ ] Não existem NIFs fictícios ou dados fiscais de teste em produção.
+
+### 2. Séries e numeração
+
+* [ ] Cada série possui identificação própria.
+* [ ] Numeração dos documentos é sequencial.
+* [ ] Numeração respeita a ordem cronológica aplicável.
+* [ ] Não existem números duplicados.
+* [ ] O utilizador não consegue escolher livremente um número já utilizado.
+* [ ] Não é possível apagar uma factura emitida para reutilizar o número.
+* [ ] Alterações à série ficam registadas.
+* [ ] Documentos de diferentes séries não entram em conflito.
+* [ ] O sistema consegue identificar inequivocamente série + número.
+
+A própria documentação disponibilizada pela AGT indica que programas informáticos utilizados para emissão devem garantir *numeração sequencial e cronológica* dos documentos. ([AGT][2])
+
+### 3. Documentos de facturação
+
+Verificar cada tipo utilizado pelo sistema:
+
+* [ ] Factura.
+* [ ] Factura-recibo.
+* [ ] Nota de crédito.
+* [ ] Nota de débito.
+* [ ] Recibo.
+* [ ] Documento equivalente, quando aplicável.
+* [ ] Outros documentos previstos pela configuração fiscal.
+
+Para cada documento:
+
+* [ ] Número.
+* [ ] Série.
+* [ ] Data.
+* [ ] Cliente.
+* [ ] NIF, quando aplicável.
+* [ ] Produtos/serviços.
+* [ ] Quantidades.
+* [ ] Preços.
+* [ ] Descontos.
+* [ ] Impostos.
+* [ ] Total.
+* [ ] Método de pagamento, quando aplicável.
+* [ ] Estado do documento.
+* [ ] Referência ao documento original quando for documento de correcção.
+
+### 4. Integridade dos documentos
+
+* [ ] Documento emitido não pode ser alterado livremente.
+* [ ] Documento emitido não pode ser apagado.
+* [ ] Número não pode ser reutilizado.
+* [ ] Anulação fica registada.
+* [ ] Correcções deixam histórico.
+* [ ] Utilizador responsável fica registado.
+* [ ] Data/hora da operação ficam registadas.
+* [ ] Notas de crédito/débito mantêm ligação ao documento original.
+* [ ] O sistema não permite alterar silenciosamente valores fiscais de documentos já emitidos.
+
+### 5. IVA e impostos
+
+* [ ] Taxas de IVA configuráveis correctamente.
+* [ ] Código/tipo de imposto correctamente associado.
+* [ ] Base tributável correcta.
+* [ ] Valor do imposto correcto.
+* [ ] Total correcto.
+* [ ] Isenções têm motivo/código quando aplicável.
+* [ ] Operações não sujeitas são distinguidas de operações isentas.
+* [ ] IVA é calculado no backend.
+* [ ] Arredondamento é consistente.
+* [ ] O valor apresentado na factura coincide com o valor armazenado.
+* [ ] O valor exportado para SAF-T coincide com o documento.
+* [ ] Relatórios fiscais usam os mesmos valores dos documentos.
+
+### 6. Clientes
+
+* [ ] Código único.
+* [ ] Nome.
+* [ ] NIF, quando aplicável.
+* [ ] Morada/dados necessários.
+* [ ] País.
+* [ ] Estado activo/inactivo.
+* [ ] Dados consistentes com as facturas.
+* [ ] Não existem clientes duplicados indevidamente.
+
+### 7. Produtos e serviços
+
+* [ ] Código único.
+* [ ] Descrição.
+* [ ] Unidade de medida.
+* [ ] Preço.
+* [ ] Taxa/código de imposto.
+* [ ] Categoria.
+* [ ] Estado activo/inactivo.
+* [ ] Informação necessária à exportação SAF-T.
+* [ ] Produtos eliminados não quebram documentos históricos.
+
+### 8. Pagamentos
+
+* [ ] Método de pagamento correctamente registado.
+* [ ] Valor pago.
+* [ ] Data do pagamento.
+* [ ] Documento associado.
+* [ ] Pagamento parcial tratado correctamente.
+* [ ] Pagamento total tratado correctamente.
+* [ ] Troco calculado correctamente, quando aplicável.
+* [ ] Dados de pagamento são exportados correctamente quando exigidos.
+
+### 9. Notas de crédito/débito
+
+* [ ] Documento original identificado.
+* [ ] Motivo da correcção.
+* [ ] Valores consistentes.
+* [ ] IVA correctamente revertido/ajustado.
+* [ ] Não é possível criar correcções inconsistentes.
+* [ ] Histórico preservado.
+* [ ] SAF-T mantém relação entre documentos.
+
+### 10. SAF-T AO
+
+Aqui deve ser feita uma auditoria específica do *ficheiro efectivamente produzido pelo sistema*, não apenas do botão “Exportar”.
+
+* [ ] Exportação XML funciona.
+* [ ] XML é bem formado.
+* [ ] Estrutura corresponde ao modelo aplicável.
+* [ ] Dados da empresa presentes.
+* [ ] Clientes presentes.
+* [ ] Fornecedores presentes, quando aplicável.
+* [ ] Produtos/serviços presentes.
+* [ ] Impostos presentes.
+* [ ] Documentos presentes.
+* [ ] Linhas dos documentos presentes.
+* [ ] Pagamentos presentes.
+* [ ] Totais coerentes.
+* [ ] Datas coerentes.
+* [ ] Séries coerentes.
+* [ ] Numeração coerente.
+* [ ] Documentos anulados/corrigidos correctamente representados.
+* [ ] Não existem documentos emitidos na aplicação que desapareçam do SAF-T.
+* [ ] Não existem documentos no SAF-T que não existam na aplicação.
+* [ ] Não existem duplicações.
+* [ ] Valores do SAF-T reconciliam com os valores da base de dados.
+
+*Importante:* não vou assumir que uma determinada tag ou campo é obrigatório apenas porque aparece num modelo SAF-T de outro país. A estrutura específica aplicável a Angola deve ser confrontada com a documentação oficial vigente da AGT.
+
+### 11. Auditoria e rastreabilidade
+
+* [ ] Login registado.
+* [ ] Criação de documentos registada.
+* [ ] Anulação registada.
+* [ ] Correcção registada.
+* [ ] Alterações de configuração fiscal registadas.
+* [ ] Alterações de séries registadas.
+* [ ] Alterações de produtos registadas.
+* [ ] Alterações de stock registadas.
+* [ ] Utilizador responsável identificado.
+* [ ] Data/hora registada.
+* [ ] Histórico não pode ser apagado por utilizadores normais.
+
+### 12. Arquivo
+
+A documentação fiscal disponibilizada pela AGT indica obrigação de conservar facturas/documentos equivalentes e determinados registos relacionados com os tratamentos informáticos durante *cinco anos*, além de requisitos relativos ao arquivo. ([AGT][2])
+
+Portanto, verificar:
+
+* [ ] Documentos emitidos podem ser recuperados.
+* [ ] Documentos não desaparecem após encerramento de períodos.
+* [ ] Existe mecanismo de backup.
+* [ ] Backups podem ser restaurados.
+* [ ] Histórico permanece disponível pelo período aplicável.
+* [ ] Não existe função normal de “apagar factura definitivamente”.
+
+### 13. Segurança
+
+* [ ] Passwords armazenadas de forma segura.
+* [ ] Perfis de utilizador.
+* [ ] Permissões por operação.
+* [ ] Operações administrativas protegidas.
+* [ ] API valida autorização.
+* [ ] Backend valida todos os valores críticos.
+* [ ] SQL injection protegido.
+* [ ] XSS protegido.
+* [ ] Segredos não ficam expostos.
+* [ ] Sessões protegidas.
+* [ ] Logs não podem ser manipulados por utilizadores comuns.
+
+### 14. Base de dados
+
+* [ ] Números de documento únicos.
+* [ ] Foreign keys onde necessárias.
+* [ ] Constraints.
+* [ ] Transacções nas operações críticas.
+* [ ] Integridade entre factura e linhas.
+* [ ] Integridade entre factura e pagamento.
+* [ ] Integridade entre factura e stock.
+* [ ] Não existem registos órfãos.
+* [ ] Não existem duplicações indevidas.
+
+### 15. Stock
+
+* [ ] Entrada de stock.
+* [ ] Saída de stock.
+* [ ] Ajuste.
+* [ ] Devolução.
+* [ ] Stock inicial.
+* [ ] Histórico.
+* [ ] Relação entre venda e saída de stock.
+* [ ] Relação entre devolução e entrada.
+* [ ] Regra de stock negativo definida.
+* [ ] Operações concorrentes protegidas.
+* [ ] Quantidade disponível consistente com o histórico.
+
+### 16. Reconciliação
+
+Este é um dos testes mais importantes:
+
+*Facturação → Base de dados → Relatórios → SAF-T*
+
+Devem reconciliar:
+
+* [ ] Número de documentos.
+* [ ] Total de vendas.
+* [ ] Base tributável.
+* [ ] IVA.
+* [ ] Total facturado.
+* [ ] Notas de crédito.
+* [ ] Notas de débito.
+* [ ] Anulações.
+* [ ] Pagamentos.
+
+Se, por exemplo, o sistema mostra *100 facturas, mas o SAF-T contém **98*, temos uma falha que precisa ser investigada.
+
+### 17. Testes antes da submissão
+
+* [ ] Criar factura de teste.
+* [ ] Verificar cálculo.
+* [ ] Emitir documento.
+* [ ] Tentar alterar documento emitido.
+* [ ] Tentar duplicar número.
+* [ ] Criar nota de crédito.
+* [ ] Anular documento.
+* [ ] Fazer pagamento.
+* [ ] Fazer devolução.
+* [ ] Movimentar stock.
+* [ ] Gerar SAF-T.
+* [ ] Validar XML.
+* [ ] Comparar SAF-T com base de dados.
+* [ ] Fazer backup.
+* [ ] Restaurar backup.
+* [ ] Testar permissões com diferentes utilizadores.
+
+## 🚦 Classificação final
+
+Eu usaria estas quatro categorias:
+
+*🟢 CONFORME*
+Existe evidência técnica suficiente de que o requisito está implementado.
+
+*🔴 NÃO CONFORME*
+Foi encontrado comportamento que contradiz um requisito aplicável ou cria uma inconsistência relevante.
+
+*🟡 PENDENTE DE EVIDÊNCIA*
+A implementação pode existir, mas falta documentação, configuração ou teste para comprová-la.
+
+*⚪ NÃO VERIFICÁVEL / VALIDAÇÃO AGT*
+Depende de confirmação da AGT, de ambiente oficial ou de procedimento externo que não conseguimos validar apenas pelo código.
+
+### ⚠️ Uma distinção importante
+
+Esta checklist pode deixar o sistema *tecnicamente preparado para uma validação, mas não equivale a uma certificação ou aprovação da AGT. O próprio portal da AGT mantém uma área específica para **programas validados*, além da legislação, circulares e instrutivos aplicáveis. ([AGT][3])

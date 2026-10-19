@@ -1,0 +1,336 @@
+artifacts-2.zip | 287 ficheiros | SHA256 3459fe90b71e69d40f6bf0eee25cbf745917131a28b73f74b9dcab8be0681099
+└── artifacts/
+    ├── api-server/
+    │   ├── .replit-artifact/
+    │   │   └── artifact.toml
+    │   ├── dist/
+    │   │   ├── index.mjs
+    │   │   ├── index.mjs.map
+    │   │   ├── pino-file.mjs
+    │   │   ├── pino-file.mjs.map
+    │   │   ├── pino-pretty.mjs
+    │   │   ├── pino-pretty.mjs.map
+    │   │   ├── pino-worker.mjs
+    │   │   ├── pino-worker.mjs.map
+    │   │   ├── thread-stream-worker.mjs
+    │   │   └── thread-stream-worker.mjs.map
+    │   ├── src/
+    │   │   ├── lib/
+    │   │   │   ├── .gitkeep
+    │   │   │   ├── fiscalGuard.test.mjs
+    │   │   │   ├── fiscalGuard.ts
+    │   │   │   └── logger.ts
+    │   │   ├── middlewares/
+    │   │   │   ├── .gitkeep
+    │   │   │   └── clerkProxyMiddleware.ts
+    │   │   ├── routes/
+    │   │   │   ├── appState.ts
+    │   │   │   ├── health.ts
+    │   │   │   └── index.ts
+    │   │   ├── app.ts
+    │   │   └── index.ts
+    │   ├── .tsbuildinfo
+    │   ├── build.mjs
+    │   ├── package.json
+    │   └── tsconfig.json
+    ├── facturacao-stock/
+    │   ├── .replit-artifact/
+    │   │   └── artifact.toml
+    │   ├── dist/
+    │   │   └── public/
+    │   │       ├── assets/
+    │   │       │   ├── index-BiZl7PES.js
+    │   │       │   └── index-dCfbKvOx.css
+    │   │       ├── icon-192.png
+    │   │       ├── icon-192.svg
+    │   │       ├── icon-512.png
+    │   │       ├── icon-512.svg
+    │   │       ├── index.html
+    │   │       ├── logo.png
+    │   │       ├── manifest.json
+    │   │       └── sw.js
+    │   ├── public/
+    │   │   ├── icon-192.png
+    │   │   ├── icon-192.svg
+    │   │   ├── icon-512.png
+    │   │   ├── icon-512.svg
+    │   │   ├── logo.png
+    │   │   ├── manifest.json
+    │   │   └── sw.js
+    │   ├── src/
+    │   │   ├── components/
+    │   │   │   ├── auth/
+    │   │   │   │   ├── AuthPinModal.tsx
+    │   │   │   │   ├── UserBadgeMenu.tsx
+    │   │   │   │   └── UserSwitchModal.tsx
+    │   │   │   ├── config/
+    │   │   │   │   ├── AgtFiscalComplianceSection.tsx
+    │   │   │   │   ├── PrinterModal.tsx
+    │   │   │   │   ├── PwaOfflineSettingsSection.tsx
+    │   │   │   │   ├── ThermalPrinterProfilesSection.tsx
+    │   │   │   │   ├── UserManagementSection.tsx
+    │   │   │   │   └── UserModal.tsx
+    │   │   │   ├── pwa/
+    │   │   │   │   ├── InstallAppModal.tsx
+    │   │   │   │   └── OfflineStatusBar.tsx
+    │   │   │   ├── BarcodeLabelModal.tsx
+    │   │   │   ├── BarcodeScannerModal.tsx
+    │   │   │   ├── ClienteField.tsx
+    │   │   │   ├── KitsProcedimentosModal.tsx
+    │   │   │   ├── Navbar.tsx
+    │   │   │   ├── NotificationDrawer.tsx
+    │   │   │   ├── ReportExportModal.tsx
+    │   │   │   └── StockMovementModal.tsx
+    │   │   ├── data/
+    │   │   │   ├── eletromedicinaCatalog.ts
+    │   │   │   └── kitsCatalog.ts
+    │   │   ├── store/
+    │   │   │   └── AppContext.tsx
+    │   │   ├── types/
+    │   │   │   └── index.ts
+    │   │   ├── utils/
+    │   │   │   ├── barcodeUtils.ts
+    │   │   │   ├── faturaGenerator.ts
+    │   │   │   ├── indexedDbEngine.ts
+    │   │   │   ├── pdfExportEngine.ts
+    │   │   │   ├── pwaUtils.ts
+    │   │   │   ├── reportPdfGenerator.ts
+    │   │   │   ├── saftGenerator.ts
+    │   │   │   ├── thermalPrinterTest.ts
+    │   │   │   └── userPermissions.ts
+    │   │   ├── views/
+    │   │   │   ├── enfermagem/
+    │   │   │   ├── Laoboratório/
+    │   │   │   │   └── lab-results/
+    │   │   │   │       ├── .replit-artifact/
+    │   │   │   │       │   └── artifact.toml
+    │   │   │   │       ├── public/
+    │   │   │   │       │   ├── favicon.svg
+    │   │   │   │       │   ├── opengraph.jpg
+    │   │   │   │       │   └── robots.txt
+    │   │   │   │       ├── src/
+    │   │   │   │       │   ├── components/
+    │   │   │   │       │   │   └── ui/
+    │   │   │   │       │   │       ├── accordion.tsx
+    │   │   │   │       │   │       ├── alert-dialog.tsx
+    │   │   │   │       │   │       ├── alert.tsx
+    │   │   │   │       │   │       ├── aspect-ratio.tsx
+    │   │   │   │       │   │       ├── avatar.tsx
+    │   │   │   │       │   │       ├── badge.tsx
+    │   │   │   │       │   │       ├── breadcrumb.tsx
+    │   │   │   │       │   │       ├── button-group.tsx
+    │   │   │   │       │   │       ├── button.tsx
+    │   │   │   │       │   │       ├── calendar.tsx
+    │   │   │   │       │   │       ├── card.tsx
+    │   │   │   │       │   │       ├── carousel.tsx
+    │   │   │   │       │   │       ├── chart.tsx
+    │   │   │   │       │   │       ├── checkbox.tsx
+    │   │   │   │       │   │       ├── collapsible.tsx
+    │   │   │   │       │   │       ├── command.tsx
+    │   │   │   │       │   │       ├── context-menu.tsx
+    │   │   │   │       │   │       ├── dialog.tsx
+    │   │   │   │       │   │       ├── drawer.tsx
+    │   │   │   │       │   │       ├── dropdown-menu.tsx
+    │   │   │   │       │   │       ├── empty.tsx
+    │   │   │   │       │   │       ├── field.tsx
+    │   │   │   │       │   │       ├── form.tsx
+    │   │   │   │       │   │       ├── hover-card.tsx
+    │   │   │   │       │   │       ├── input-group.tsx
+    │   │   │   │       │   │       ├── input-otp.tsx
+    │   │   │   │       │   │       ├── input.tsx
+    │   │   │   │       │   │       ├── item.tsx
+    │   │   │   │       │   │       ├── kbd.tsx
+    │   │   │   │       │   │       ├── label.tsx
+    │   │   │   │       │   │       ├── menubar.tsx
+    │   │   │   │       │   │       ├── navigation-menu.tsx
+    │   │   │   │       │   │       ├── pagination.tsx
+    │   │   │   │       │   │       ├── popover.tsx
+    │   │   │   │       │   │       ├── progress.tsx
+    │   │   │   │       │   │       ├── radio-group.tsx
+    │   │   │   │       │   │       ├── resizable.tsx
+    │   │   │   │       │   │       ├── scroll-area.tsx
+    │   │   │   │       │   │       ├── select.tsx
+    │   │   │   │       │   │       ├── separator.tsx
+    │   │   │   │       │   │       ├── sheet.tsx
+    │   │   │   │       │   │       ├── sidebar.tsx
+    │   │   │   │       │   │       ├── skeleton.tsx
+    │   │   │   │       │   │       ├── slider.tsx
+    │   │   │   │       │   │       ├── sonner.tsx
+    │   │   │   │       │   │       ├── spinner.tsx
+    │   │   │   │       │   │       ├── switch.tsx
+    │   │   │   │       │   │       ├── table.tsx
+    │   │   │   │       │   │       ├── tabs.tsx
+    │   │   │   │       │   │       ├── textarea.tsx
+    │   │   │   │       │   │       ├── toast.tsx
+    │   │   │   │       │   │       ├── toaster.tsx
+    │   │   │   │       │   │       ├── toggle-group.tsx
+    │   │   │   │       │   │       ├── toggle.tsx
+    │   │   │   │       │   │       └── tooltip.tsx
+    │   │   │   │       │   ├── data/
+    │   │   │   │       │   │   └── exames.ts
+    │   │   │   │       │   ├── farmsys/
+    │   │   │   │       │   │   ├── AppContext.tsx
+    │   │   │   │       │   │   ├── auth.ts
+    │   │   │   │       │   │   ├── DashboardView.tsx
+    │   │   │   │       │   │   ├── data.ts
+    │   │   │   │       │   │   ├── FarmaciaSystem.tsx
+    │   │   │   │       │   │   ├── Faturacao.tsx
+    │   │   │   │       │   │   ├── faturaGenerator.ts
+    │   │   │   │       │   │   ├── Header.tsx
+    │   │   │   │       │   │   ├── ManagementView.tsx
+    │   │   │   │       │   │   ├── POSView.tsx
+    │   │   │   │       │   │   ├── Sidebar.tsx
+    │   │   │   │       │   │   ├── storage.ts
+    │   │   │   │       │   │   └── types.ts
+    │   │   │   │       │   ├── hooks/
+    │   │   │   │       │   │   ├── use-mobile.tsx
+    │   │   │   │       │   │   └── use-toast.ts
+    │   │   │   │       │   ├── lib/
+    │   │   │   │       │   │   └── utils.ts
+    │   │   │   │       │   ├── pages/
+    │   │   │   │       │   │   ├── AdminEmpresas.tsx
+    │   │   │   │       │   │   ├── AdminFuncionarios.tsx
+    │   │   │   │       │   │   ├── CadastrarExames.tsx
+    │   │   │   │       │   │   ├── Configuracoes.tsx
+    │   │   │   │       │   │   ├── ContaCorrente.tsx
+    │   │   │   │       │   │   ├── Dashboard.tsx
+    │   │   │   │       │   │   ├── Enfermagem.tsx
+    │   │   │   │       │   │   ├── Farmacia.tsx
+    │   │   │   │       │   │   ├── Faturacao.tsx
+    │   │   │   │       │   │   ├── FUNDO.png
+    │   │   │   │       │   │   ├── GestaParceiros.tsx
+    │   │   │   │       │   │   ├── GestaProdutos.tsx
+    │   │   │   │       │   │   ├── GestaStock.tsx
+    │   │   │   │       │   │   ├── Historico.tsx
+    │   │   │   │       │   │   ├── Imagiologia.tsx
+    │   │   │   │       │   │   ├── LancarResultados.tsx
+    │   │   │   │       │   │   ├── Login.tsx
+    │   │   │   │       │   │   ├── Logo.png
+    │   │   │   │       │   │   ├── Medico.tsx
+    │   │   │   │       │   │   ├── not-found.tsx
+    │   │   │   │       │   │   ├── nvualasot (1).zip
+    │   │   │   │       │   │   ├── Pacientes.tsx
+    │   │   │   │       │   │   ├── PortalParceiro.tsx
+    │   │   │   │       │   │   └── Recepcao.tsx
+    │   │   │   │       │   ├── store/
+    │   │   │   │       │   │   ├── api.ts
+    │   │   │   │       │   │   ├── AppContext.tsx
+    │   │   │   │       │   │   ├── auth.ts
+    │   │   │   │       │   │   ├── defaults.ts
+    │   │   │   │       │   │   └── storage.ts
+    │   │   │   │       │   ├── utils/
+    │   │   │   │       │   │   ├── faturaGenerator.ts
+    │   │   │   │       │   │   ├── listPdfGenerator.ts
+    │   │   │   │       │   │   ├── pdfGenerator.ts
+    │   │   │   │       │   │   ├── seedProdutos.ts
+    │   │   │   │       │   │   └── zipExport.ts
+    │   │   │   │       │   ├── App.tsx
+    │   │   │   │       │   ├── assets.d.ts
+    │   │   │   │       │   ├── index.css
+    │   │   │   │       │   └── main.tsx
+    │   │   │   │       ├── .tsbuildinfo
+    │   │   │   │       ├── components.json
+    │   │   │   │       ├── index.html
+    │   │   │   │       ├── package.json
+    │   │   │   │       ├── tsconfig.json
+    │   │   │   │       └── vite.config.ts
+    │   │   │   ├── ClientesView.tsx
+    │   │   │   ├── ConfiguracoesView.tsx
+    │   │   │   ├── EstoqueView.tsx
+    │   │   │   ├── FaturacaoView.tsx
+    │   │   │   ├── GraficosConsumoView.tsx
+    │   │   │   ├── MovimentacoesView.tsx
+    │   │   │   ├── POSView.tsx
+    │   │   │   └── ValidadeAlertasView.tsx
+    │   │   ├── App.tsx
+    │   │   ├── index.css
+    │   │   └── main.tsx
+    │   ├── .env.example
+    │   ├── components.json
+    │   ├── index.html
+    │   ├── metadata.json
+    │   ├── package.json
+    │   ├── README.md
+    │   ├── tsconfig.json
+    │   ├── tsconfig.tsbuildinfo
+    │   └── vite.config.ts
+    ├── mockup-sandbox/
+    │   ├── .replit-artifact/
+    │   │   └── artifact.toml
+    │   ├── src/
+    │   │   ├── .generated/
+    │   │   │   └── mockup-components.ts
+    │   │   ├── components/
+    │   │   │   ├── mockups/
+    │   │   │   └── ui/
+    │   │   │       ├── accordion.tsx
+    │   │   │       ├── alert-dialog.tsx
+    │   │   │       ├── alert.tsx
+    │   │   │       ├── aspect-ratio.tsx
+    │   │   │       ├── avatar.tsx
+    │   │   │       ├── badge.tsx
+    │   │   │       ├── breadcrumb.tsx
+    │   │   │       ├── button-group.tsx
+    │   │   │       ├── button.tsx
+    │   │   │       ├── calendar.tsx
+    │   │   │       ├── card.tsx
+    │   │   │       ├── carousel.tsx
+    │   │   │       ├── chart.tsx
+    │   │   │       ├── checkbox.tsx
+    │   │   │       ├── collapsible.tsx
+    │   │   │       ├── command.tsx
+    │   │   │       ├── context-menu.tsx
+    │   │   │       ├── dialog.tsx
+    │   │   │       ├── drawer.tsx
+    │   │   │       ├── dropdown-menu.tsx
+    │   │   │       ├── empty.tsx
+    │   │   │       ├── field.tsx
+    │   │   │       ├── form.tsx
+    │   │   │       ├── hover-card.tsx
+    │   │   │       ├── input-group.tsx
+    │   │   │       ├── input-otp.tsx
+    │   │   │       ├── input.tsx
+    │   │   │       ├── item.tsx
+    │   │   │       ├── kbd.tsx
+    │   │   │       ├── label.tsx
+    │   │   │       ├── menubar.tsx
+    │   │   │       ├── navigation-menu.tsx
+    │   │   │       ├── pagination.tsx
+    │   │   │       ├── popover.tsx
+    │   │   │       ├── progress.tsx
+    │   │   │       ├── radio-group.tsx
+    │   │   │       ├── resizable.tsx
+    │   │   │       ├── scroll-area.tsx
+    │   │   │       ├── select.tsx
+    │   │   │       ├── separator.tsx
+    │   │   │       ├── sheet.tsx
+    │   │   │       ├── sidebar.tsx
+    │   │   │       ├── skeleton.tsx
+    │   │   │       ├── slider.tsx
+    │   │   │       ├── sonner.tsx
+    │   │   │       ├── spinner.tsx
+    │   │   │       ├── switch.tsx
+    │   │   │       ├── table.tsx
+    │   │   │       ├── tabs.tsx
+    │   │   │       ├── textarea.tsx
+    │   │   │       ├── toast.tsx
+    │   │   │       ├── toaster.tsx
+    │   │   │       ├── toggle-group.tsx
+    │   │   │       ├── toggle.tsx
+    │   │   │       └── tooltip.tsx
+    │   │   ├── hooks/
+    │   │   │   ├── use-mobile.tsx
+    │   │   │   └── use-toast.ts
+    │   │   ├── lib/
+    │   │   │   └── utils.ts
+    │   │   ├── App.tsx
+    │   │   ├── index.css
+    │   │   └── main.tsx
+    │   ├── .tsbuildinfo
+    │   ├── components.json
+    │   ├── index.html
+    │   ├── mockupPreviewPlugin.ts
+    │   ├── package.json
+    │   ├── tsconfig.json
+    │   └── vite.config.ts
+    └── TS.tsx

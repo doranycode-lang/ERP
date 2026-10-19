@@ -1,0 +1,1443 @@
+{
+  "source": "imports/facturacao-produtos/artifacts-2.zip",
+  "source_sha256": "3459fe90b71e69d40f6bf0eee25cbf745917131a28b73f74b9dcab8be0681099",
+  "file_count": 287,
+  "files": [
+    {
+      "file": "artifacts/api-server/.replit-artifact/artifact.toml",
+      "bytes": 784,
+      "sha256": "e461708bfe50f6eb964fa755cf0c6ba813c19392be055d5ef96c729aa0173539"
+    },
+    {
+      "file": "artifacts/api-server/.tsbuildinfo",
+      "bytes": 210873,
+      "sha256": "18ca59a7b226978ed79d86edd1ed94ef8773eba948afc26c9d2c511671036557"
+    },
+    {
+      "file": "artifacts/api-server/build.mjs",
+      "bytes": 3455,
+      "sha256": "a268757bc319f2ccaf2f2661d6616ea9cab3c8d8bc45b46b0ebfdb2bc6180267"
+    },
+    {
+      "file": "artifacts/api-server/dist/index.mjs",
+      "bytes": 2380419,
+      "sha256": "d30b6fa0374bfbdcb22dac5ce9380d8aa62a29048e46a6c7be828d25dec58465"
+    },
+    {
+      "file": "artifacts/api-server/dist/index.mjs.map",
+      "bytes": 4451523,
+      "sha256": "567f9f99a7e7844c2adcb024d150051784920db033ebeda8d851fe9f4a8c8804"
+    },
+    {
+      "file": "artifacts/api-server/dist/pino-file.mjs",
+      "bytes": 145464,
+      "sha256": "981950bfc06b480ac6bf216040997b44a11c45e7838b90f684f6833f42c7f100"
+    },
+    {
+      "file": "artifacts/api-server/dist/pino-file.mjs.map",
+      "bytes": 234541,
+      "sha256": "2fcdcc7cfd28d8355f381b4fc9b0f32b6587d8d9451e6cd5db301b961913fe98"
+    },
+    {
+      "file": "artifacts/api-server/dist/pino-pretty.mjs",
+      "bytes": 117098,
+      "sha256": "cfb34bd6bf4580424d866595c4f6e774eee3126cd5383c7ba0f87bc10b747e9e"
+    },
+    {
+      "file": "artifacts/api-server/dist/pino-pretty.mjs.map",
+      "bytes": 208440,
+      "sha256": "a7d3c3a4613f9648f8cb7e69a6abeacdbe3934792fcc24cc0af74fd6fde3eb90"
+    },
+    {
+      "file": "artifacts/api-server/dist/pino-worker.mjs",
+      "bytes": 157102,
+      "sha256": "c9069ca9d2b691877f13e5894600fae17660c088e92331506c8f548cf25acdf7"
+    },
+    {
+      "file": "artifacts/api-server/dist/pino-worker.mjs.map",
+      "bytes": 263033,
+      "sha256": "6a78ffa90a980281462b21e5c9e1d984fc0d138b5fdda1a2bd01f845d5cdf918"
+    },
+    {
+      "file": "artifacts/api-server/dist/thread-stream-worker.mjs",
+      "bytes": 7501,
+      "sha256": "44286ceae07d2e89f8a5820fda394a5f2bca0bad037b25c1c393ae45eb20ca4b"
+    },
+    {
+      "file": "artifacts/api-server/dist/thread-stream-worker.mjs.map",
+      "bytes": 12320,
+      "sha256": "e5fd66fcec3ca622f449a275bd6b14d061ed62ce34faadce8716b363a4df878a"
+    },
+    {
+      "file": "artifacts/api-server/package.json",
+      "bytes": 1030,
+      "sha256": "bbe0baf01b7dd126ce6f6d611aee64f1922ccbba179c83b572c17aabfc2760de"
+    },
+    {
+      "file": "artifacts/api-server/src/app.ts",
+      "bytes": 1355,
+      "sha256": "e787e985b7c12016a74ffd0d741cb8f42eee445ef2546222a86304c8ff2c3884"
+    },
+    {
+      "file": "artifacts/api-server/src/index.ts",
+      "bytes": 511,
+      "sha256": "9c1f296e0008006b40d766ee436697e43ef99cf907f2c7afe9a6cd2d6c118d3c"
+    },
+    {
+      "file": "artifacts/api-server/src/lib/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "artifacts/api-server/src/lib/fiscalGuard.test.mjs",
+      "bytes": 3654,
+      "sha256": "6604af3d10bc5b627a8b619c301d04e19d271f1ee902e48cb3dbe480b89e053d"
+    },
+    {
+      "file": "artifacts/api-server/src/lib/fiscalGuard.ts",
+      "bytes": 4130,
+      "sha256": "3c871cca304dce431644ae82e08cee51732de09fc0868f8150e7b57c89e4fba3"
+    },
+    {
+      "file": "artifacts/api-server/src/lib/logger.ts",
+      "bytes": 421,
+      "sha256": "29e1ca75036fe917595a3a74fd450857d845836fe0625c30b9caa02df4acba62"
+    },
+    {
+      "file": "artifacts/api-server/src/middlewares/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "artifacts/api-server/src/middlewares/clerkProxyMiddleware.ts",
+      "bytes": 5931,
+      "sha256": "4709696f6020bc6f869ec9becc2e332c1522724bd17cc42937c31bfe95b6d2ab"
+    },
+    {
+      "file": "artifacts/api-server/src/routes/appState.ts",
+      "bytes": 21779,
+      "sha256": "97c90a0d003c52d517734a5b52cd4606ca7d7427252ced4983b7ed7dc17bfa00"
+    },
+    {
+      "file": "artifacts/api-server/src/routes/health.ts",
+      "bytes": 288,
+      "sha256": "0386ceddb4ff4bff220af72ca38a62191ad95a2f41fd619df3bb9ceffce03db2"
+    },
+    {
+      "file": "artifacts/api-server/src/routes/index.ts",
+      "bytes": 240,
+      "sha256": "3c27e3a5436cdbb721a83aecbfe1336dfc4cb59aaaf94a3550bb6aeb47b3bec8"
+    },
+    {
+      "file": "artifacts/api-server/tsconfig.json",
+      "bytes": 335,
+      "sha256": "aa300909ccd1d4282761b5d6549a174717b663bb56cb0f59d107d4b3d96cb009"
+    },
+    {
+      "file": "artifacts/facturacao-stock/.env.example",
+      "bytes": 445,
+      "sha256": "b6d12c728de0aac8b0bc6239e53aa8088c1431bcb4f9a3d61e5e8a2df1c7c400"
+    },
+    {
+      "file": "artifacts/facturacao-stock/.replit-artifact/artifact.toml",
+      "bytes": 732,
+      "sha256": "dd311d8e197e97153553d83fcf69797123045c14a1c094fd327bdcd7b472d2f7"
+    },
+    {
+      "file": "artifacts/facturacao-stock/components.json",
+      "bytes": 434,
+      "sha256": "3a5d5af62f05e6e3de6c5085f31ed4f49273d57cfeae4d69d00a2568c91f54f9"
+    },
+    {
+      "file": "artifacts/facturacao-stock/dist/public/assets/index-BiZl7PES.js",
+      "bytes": 1650456,
+      "sha256": "de9418b19b0d09b09ce4cdc7a89b791498fae67fb1a928f8209522bbb7566bd4"
+    },
+    {
+      "file": "artifacts/facturacao-stock/dist/public/assets/index-dCfbKvOx.css",
+      "bytes": 80066,
+      "sha256": "79686e459f28e4c4514a57dedc925c4c2d74982e485b044557b9ebe3f781c3ca"
+    },
+    {
+      "file": "artifacts/facturacao-stock/dist/public/icon-192.png",
+      "bytes": 62969,
+      "sha256": "151e82cdc70c047de0a56916fee164d2598ac03814ee320a4088f7ea3431127e"
+    },
+    {
+      "file": "artifacts/facturacao-stock/dist/public/icon-192.svg",
+      "bytes": 1199,
+      "sha256": "52c9b1498fc009832fe6e6a57aa67f106eb4cac53df75023214a5ccbdb6ca722"
+    },
+    {
+      "file": "artifacts/facturacao-stock/dist/public/icon-512.png",
+      "bytes": 240309,
+      "sha256": "413827378fec948ebc3e8562ebc470b3d61dd2552cb820d14205a6f80c95680a"
+    },
+    {
+      "file": "artifacts/facturacao-stock/dist/public/icon-512.svg",
+      "bytes": 1445,
+      "sha256": "743e701cae24f0a62a52111478b852eb09a204395d2ef2a6b7b2a4df55f21178"
+    },
+    {
+      "file": "artifacts/facturacao-stock/dist/public/index.html",
+      "bytes": 1658,
+      "sha256": "5bc1b761e521f5bb5d344fcabaaa7eac75718e2526016f44da4d40e755584546"
+    },
+    {
+      "file": "artifacts/facturacao-stock/dist/public/logo.png",
+      "bytes": 240309,
+      "sha256": "413827378fec948ebc3e8562ebc470b3d61dd2552cb820d14205a6f80c95680a"
+    },
+    {
+      "file": "artifacts/facturacao-stock/dist/public/manifest.json",
+      "bytes": 1469,
+      "sha256": "b2e1a94f3a008b4fed271782ed4e829fa58ad374d48e7fde6f91aec1ae5b6419"
+    },
+    {
+      "file": "artifacts/facturacao-stock/dist/public/sw.js",
+      "bytes": 2757,
+      "sha256": "3053fae79504cafd7d4f9bda4c2d1879de2003e9e3ced2e15f01a2e7249a5db0"
+    },
+    {
+      "file": "artifacts/facturacao-stock/index.html",
+      "bytes": 1475,
+      "sha256": "14d319d06debe564621b296b043d4cfe76559bed2fb689b04039db7effbc5ad2"
+    },
+    {
+      "file": "artifacts/facturacao-stock/metadata.json",
+      "bytes": 405,
+      "sha256": "bb5a930686fb1de756a5f5546890e115a8e1e0e3c42e47cb2fdf8ad74ac53025"
+    },
+    {
+      "file": "artifacts/facturacao-stock/package.json",
+      "bytes": 3219,
+      "sha256": "dc5bf685f6c2ceaa90159bc901ac3f72162dfd5eacff9bf90c55f84cdd647fea"
+    },
+    {
+      "file": "artifacts/facturacao-stock/public/icon-192.png",
+      "bytes": 62969,
+      "sha256": "151e82cdc70c047de0a56916fee164d2598ac03814ee320a4088f7ea3431127e"
+    },
+    {
+      "file": "artifacts/facturacao-stock/public/icon-192.svg",
+      "bytes": 1199,
+      "sha256": "52c9b1498fc009832fe6e6a57aa67f106eb4cac53df75023214a5ccbdb6ca722"
+    },
+    {
+      "file": "artifacts/facturacao-stock/public/icon-512.png",
+      "bytes": 240309,
+      "sha256": "413827378fec948ebc3e8562ebc470b3d61dd2552cb820d14205a6f80c95680a"
+    },
+    {
+      "file": "artifacts/facturacao-stock/public/icon-512.svg",
+      "bytes": 1445,
+      "sha256": "743e701cae24f0a62a52111478b852eb09a204395d2ef2a6b7b2a4df55f21178"
+    },
+    {
+      "file": "artifacts/facturacao-stock/public/logo.png",
+      "bytes": 240309,
+      "sha256": "413827378fec948ebc3e8562ebc470b3d61dd2552cb820d14205a6f80c95680a"
+    },
+    {
+      "file": "artifacts/facturacao-stock/public/manifest.json",
+      "bytes": 1469,
+      "sha256": "b2e1a94f3a008b4fed271782ed4e829fa58ad374d48e7fde6f91aec1ae5b6419"
+    },
+    {
+      "file": "artifacts/facturacao-stock/public/sw.js",
+      "bytes": 2757,
+      "sha256": "3053fae79504cafd7d4f9bda4c2d1879de2003e9e3ced2e15f01a2e7249a5db0"
+    },
+    {
+      "file": "artifacts/facturacao-stock/README.md",
+      "bytes": 542,
+      "sha256": "b4314e28400ceb59953d42f90bcd877235748b38ac7e5bf911835a7c57887520"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/App.tsx",
+      "bytes": 16969,
+      "sha256": "bc60085a5e6dc16dfeb1f3eb1ee4e3c0d3ce8c726f764a018371dd1594710e9a"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/auth/AuthPinModal.tsx",
+      "bytes": 11185,
+      "sha256": "742c62272ae3cc8fda0dd383893bd1dd689146f8fcd707da5adbcfe310309d12"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/auth/UserBadgeMenu.tsx",
+      "bytes": 5154,
+      "sha256": "bd99392b9ae2b6b0cb19bd2b3190ccf6e6fb4ef7a772368d2a9833148eac7eb6"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/auth/UserSwitchModal.tsx",
+      "bytes": 9083,
+      "sha256": "4b8c119ec12786a1b505f4cda07960029861d0cf2d7d29ae9d7c7ffcb8f87d29"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/BarcodeLabelModal.tsx",
+      "bytes": 13120,
+      "sha256": "8a4d2f4c5a840d6e5c63e9c746995365ff39c069790084cd02f5f051cc8a9026"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/BarcodeScannerModal.tsx",
+      "bytes": 15024,
+      "sha256": "ecd3bd4729f593326ec5c9e3b849d5d0c68d27a954885f5d7e2ffaf3757c41ac"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/ClienteField.tsx",
+      "bytes": 12331,
+      "sha256": "a2ee7286703a1fa59ef098656c76975fdbb866b90716ded410445992fafe50be"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/config/AgtFiscalComplianceSection.tsx",
+      "bytes": 19942,
+      "sha256": "7c37cbf723baf5ca79d9d3ba8ce618949647cd39c88c932bbaef13ae95a4da24"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/config/PrinterModal.tsx",
+      "bytes": 22651,
+      "sha256": "9b350c8502c7cc528316f521d9cdf883096973274a2b9cabffd5690859327331"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/config/PwaOfflineSettingsSection.tsx",
+      "bytes": 10344,
+      "sha256": "d6e84ae3a82ef32bfe70f4f794e082cbc441371e20ff85f2266ff840974430b4"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/config/ThermalPrinterProfilesSection.tsx",
+      "bytes": 18470,
+      "sha256": "903fd74cba61c698bf03e8a9db61cc2cb2605d6978bb48cb39cd7aebc490e7b4"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/config/UserManagementSection.tsx",
+      "bytes": 19295,
+      "sha256": "ae3494791fde63ca7f9e7480ea7c87a2604cbe4ed29e6a4595a438a00be50365"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/config/UserModal.tsx",
+      "bytes": 14262,
+      "sha256": "285451ff8d6c4d4a22ecc1d1131da05828757fb1aea4b293419bf6476eaed15c"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/KitsProcedimentosModal.tsx",
+      "bytes": 33853,
+      "sha256": "63d8c3e6cdfa5b74d6d0d24775b72419507b9d7a8fa32b87dfdefaeb8fcfac50"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/Navbar.tsx",
+      "bytes": 9459,
+      "sha256": "da44b395e379b88aeafb8accaa4e674e7aa67838432b1a16225ae47284511272"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/NotificationDrawer.tsx",
+      "bytes": 6872,
+      "sha256": "72fe0b35aae50fb7c9a26c8feb718bdf8e7137f588ccc751ab9eb2751d0a8754"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/pwa/InstallAppModal.tsx",
+      "bytes": 15182,
+      "sha256": "c3e3002b8ab1b488876a88a5d83ddff7229fbb509ec7554954ca26be1bf08c5e"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/pwa/OfflineStatusBar.tsx",
+      "bytes": 4713,
+      "sha256": "7cab6f894d5bf8b5cc9619e28731c8998e53625cf28cc1de49e63e8531c01db7"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/ReportExportModal.tsx",
+      "bytes": 15165,
+      "sha256": "df9179aa6958422fd95a8420f40808e4183e5ec6163e88ca9b393a61e1d559ce"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/components/StockMovementModal.tsx",
+      "bytes": 12133,
+      "sha256": "00967854ed082e00cacfc500af1fb0daf91359f58cfe5c2962bd1530d2de4eb0"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/data/eletromedicinaCatalog.ts",
+      "bytes": 46700,
+      "sha256": "b6937c124dad0f9fc3bb0a4bc19db39544f13de9e38c58a1b7c2aa450190456b"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/data/kitsCatalog.ts",
+      "bytes": 14749,
+      "sha256": "fc2ea1437ea20d5c5c36408fedb3fa744ba11ce4ded4d37c37f9822c8a41036c"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/index.css",
+      "bytes": 253,
+      "sha256": "315f468f451e2b85ae0faf399c2b728506c3b3f8f7d4f2174fe52f495886eb35"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/main.tsx",
+      "bytes": 394,
+      "sha256": "de93a2a5cf118e8fa26e3d139c20960e52794bd4c088cb4517cf0c8dd2a45634"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/store/AppContext.tsx",
+      "bytes": 53995,
+      "sha256": "73627e6bb1d01632f213e5d2a1b0cb9e248476b0ac8ec809d6a1753035152256"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/types/index.ts",
+      "bytes": 7650,
+      "sha256": "43af1b79f8d353729f5933553f0e6d51d449804be4e2123adabd64871214aa2c"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/utils/barcodeUtils.ts",
+      "bytes": 3906,
+      "sha256": "9e345205ef271c40009bbd3b649081dd87f835754be431f1840ebe586b374c84"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/utils/faturaGenerator.ts",
+      "bytes": 19282,
+      "sha256": "70c3f5f88b1d2dda3f604b8bd4b2923e5bc170000002e3a245c127c79c481f69"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/utils/indexedDbEngine.ts",
+      "bytes": 10816,
+      "sha256": "6be730da54f8ed2369c6fad9ab388c1792f5c2bfa521abb9cd69642e32103d5f"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/utils/pdfExportEngine.ts",
+      "bytes": 20528,
+      "sha256": "5163057692dfc0e77d1a929c660e844d80d0697d9cd6581967f548c15d1bc4a0"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/utils/pwaUtils.ts",
+      "bytes": 6004,
+      "sha256": "5a0fe113d37f5be7bfbcaba884decbfdc33fbfb84102b6d231213bef1a6bcfca"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/utils/reportPdfGenerator.ts",
+      "bytes": 30672,
+      "sha256": "eb46f93617b42a53cb60f41921edfca1dcae1a9d415a982ccb46e24e46869689"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/utils/saftGenerator.ts",
+      "bytes": 8161,
+      "sha256": "7d8fc0e7e33dccc8456678412d68d3c4a42258bbc8347c4abbea3661c5ffbe4c"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/utils/thermalPrinterTest.ts",
+      "bytes": 8322,
+      "sha256": "2ea151ee138b06bd6294b28feeed86853de922c9812c17c2526b7d7c0e0a7ca0"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/utils/userPermissions.ts",
+      "bytes": 4428,
+      "sha256": "d160a6fabda8ea429f91e00c7134bd421c778e43e7ba2f833ffd38477972aec1"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/ClientesView.tsx",
+      "bytes": 81649,
+      "sha256": "c8102583db32d124e39413ce43033266d8e6b9e5d3ec37c12ea57322e5862f6b"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/ConfiguracoesView.tsx",
+      "bytes": 27135,
+      "sha256": "f7811b91110ede47139629c0b2fe93ef9a1e66664bd506c7d6d19e3600096307"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/EstoqueView.tsx",
+      "bytes": 116728,
+      "sha256": "066099120b1a28c96422875a4346b65c137c471919f464821ca1e560cb92d33a"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/FaturacaoView.tsx",
+      "bytes": 182692,
+      "sha256": "bf2acde2ebf633cf7dcba798f27cd17a8c8423bb470ea813aa72ff1950068d6d"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/GraficosConsumoView.tsx",
+      "bytes": 16357,
+      "sha256": "4db178f280be1551b3e39934cf195998105994a12b620c309b1992781465e2cb"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/.replit-artifact/artifact.toml",
+      "bytes": 596,
+      "sha256": "9ebbc79afec22afb616706ac043e8cbb2ff0c0b6b5f6b02066d347eb0fecfc35"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/.tsbuildinfo",
+      "bytes": 220884,
+      "sha256": "c5081640fafc1c80f05657c0e578d935915a60a63e06fc89c53aa8d3538cb08c"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/components.json",
+      "bytes": 434,
+      "sha256": "3a5d5af62f05e6e3de6c5085f31ed4f49273d57cfeae4d69d00a2568c91f54f9"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/index.html",
+      "bytes": 1334,
+      "sha256": "7ec62b0e3d688cb43e4933e0908948381b04cff98081458fdc4b7e289899b490"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/package.json",
+      "bytes": 2806,
+      "sha256": "8c92cb493fa03dc1fb5f139ff3a4877aad5c34a0e64b820764794d396c62c798"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/public/favicon.svg",
+      "bytes": 163,
+      "sha256": "8ffbde9092b1fa4de97c9481b76f518b131268c82e7c555041925225b1dab6e0"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/public/opengraph.jpg",
+      "bytes": 42678,
+      "sha256": "00eb9860c954981111e7af2ed9a9df936fce3907708dedaf864b7f4bb60db657"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/public/robots.txt",
+      "bytes": 23,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/App.tsx",
+      "bytes": 20837,
+      "sha256": "c2f336336d18742af098e5735ce53ba50d686df3d42957ba0e8a4f20ddbf57c8"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/assets.d.ts",
+      "bytes": 281,
+      "sha256": "5c1fcc066fdbd14d2151b45f74ae9a84cf6c02c429fa5597bf1b2fb21374376a"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/accordion.tsx",
+      "bytes": 2001,
+      "sha256": "dcbfb3243a26096fc3e5f54039ccb5c4c23d9bb79a4d5846b4be75bf912f07d9"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/alert-dialog.tsx",
+      "bytes": 4419,
+      "sha256": "311bede35f785d7b1ecd7398986757e26409d1049352a94ccf83586b8603c92d"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/alert.tsx",
+      "bytes": 1598,
+      "sha256": "5950ac01377e7eedc94b00eb3fee678745e4cc1a72b5343867f0733d07db6660"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/aspect-ratio.tsx",
+      "bytes": 140,
+      "sha256": "08b0aa0b05efc573c7d63363c03e83d4b101bfeb54140764e96ddea30659cfcc"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/avatar.tsx",
+      "bytes": 1419,
+      "sha256": "e78b35ed76c67d8ff50603fbe0dfa4fe600097bd860d89e65beea3e16683dad8"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/badge.tsx",
+      "bytes": 1522,
+      "sha256": "3c339f439797dba9b3872a9d89db42420ffd900504b4e0b27e9dad51e87bc41c"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/breadcrumb.tsx",
+      "bytes": 2712,
+      "sha256": "c3d3dcb0d82fc5e91d8830bac7fead905686fe876f1f42c3ed872bb0a6b6584e"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/button-group.tsx",
+      "bytes": 2209,
+      "sha256": "e3716d270e9ef6457b5cd29464ae00194abc8093c08ebf726c9204d7a69231d9"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/button.tsx",
+      "bytes": 2356,
+      "sha256": "9a9edf4fda319623ee228d5cb26ac31dd008dcfd5c57dbafe3b7d768e59e50ca"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/calendar.tsx",
+      "bytes": 7569,
+      "sha256": "787a19c855cf2b826942d25440b63150c45094154c6a40e95abdb4109298b8b4"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/card.tsx",
+      "bytes": 1828,
+      "sha256": "525c4bb2c051987be64df0e92e1d90174912b219bf541e24ffbc4a3406de49e8"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/carousel.tsx",
+      "bytes": 6210,
+      "sha256": "5a4ff73c804e86c873382da80c453f1399006326ef042fb984c24162ec86666e"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/chart.tsx",
+      "bytes": 10763,
+      "sha256": "b40d1236f168c746b228adec6bc4e9d196ea362a7910878f161d3c359a013b89"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/checkbox.tsx",
+      "bytes": 1031,
+      "sha256": "ac389a574651c8bedffc10f80674c5fc2f02ab81291a5f4ad9c587d1f775fdce"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/collapsible.tsx",
+      "bytes": 329,
+      "sha256": "f4cdd104de29928bfcd40b865c7d08eed9157a537fbb8b5e6d0921f02b63cc04"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/command.tsx",
+      "bytes": 4887,
+      "sha256": "5a57ebc119f2357b097098d22865d45de8fda623ee88fe98b99999838c13633b"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/context-menu.tsx",
+      "bytes": 7406,
+      "sha256": "5369fc82c51df067aec2934f5e711aaf9e3f745ed7baadd7ba4b77397dee2a1b"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/dialog.tsx",
+      "bytes": 3835,
+      "sha256": "f9c982ed8114c253c6ca738043d3f455e89c6d65569e90c9415776d6b4d6be14"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/drawer.tsx",
+      "bytes": 3007,
+      "sha256": "47ff6248307a4ac09bf7e00181a2a29f9f846691092e04cad03e15d749bc249b"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/dropdown-menu.tsx",
+      "bytes": 7606,
+      "sha256": "dc109123ecd59af01d07aa9f3a8e8a7085bd3f337388c5369799ab1ce6c2d45f"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/empty.tsx",
+      "bytes": 2396,
+      "sha256": "9f975582a0290dbc7ce6efa3b36b376a4c3f07863026c3b74c1e73cb0023acb8"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/field.tsx",
+      "bytes": 6044,
+      "sha256": "e463611ab049c5e9b1c61691d239e05970ead7b577a191b3f80aa6f8ffccada9"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/form.tsx",
+      "bytes": 4175,
+      "sha256": "d50adf86568f76246f0f319c9e1e858627475563f6c1e38f5df7d4ee23958559"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/hover-card.tsx",
+      "bytes": 1237,
+      "sha256": "00f9086b1412843e04e01d31d2fab00a25d65d789d1a382e41f01b1f3c167c3b"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/input-group.tsx",
+      "bytes": 4971,
+      "sha256": "e9dad28bc940ca29714312d6c75d83bfe63f0cf7f9a384d2a2969a00a1d79700"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/input-otp.tsx",
+      "bytes": 2143,
+      "sha256": "7c4799e3597f2780c09a39a1391b921fa16eaedd0476457492af734f58e2ec98"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/input.tsx",
+      "bytes": 768,
+      "sha256": "6299a6a387dc55e528aec4342deaea0b83f1ea3a365c135a31a18ee55334f441"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/item.tsx",
+      "bytes": 4494,
+      "sha256": "90983640aa7cfef8217422347d8e14825cf55137c76369decacf440767f03188"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/kbd.tsx",
+      "bytes": 862,
+      "sha256": "0c025e7736d435f563bfb44105e562629672799eb1f35cbf194148d06cd1a9f7"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/label.tsx",
+      "bytes": 724,
+      "sha256": "2eac8fbb04002c42b0fbc4062d20d131e421796eaf65c37d2049e29e42ecbc5a"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/menubar.tsx",
+      "bytes": 8608,
+      "sha256": "def61eb2c47c9ec319423471f4ca20045e99549958211cacf832e4ede769e484"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/navigation-menu.tsx",
+      "bytes": 5124,
+      "sha256": "a06d96a582ac207ffcd38445d773c05e841d646efb185b5e9b65f73e5bd388c7"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/pagination.tsx",
+      "bytes": 2751,
+      "sha256": "9506dbd19ddd0c2810d1c9668a3f01606e39d9bf33ddc43329523c03bf629012"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/popover.tsx",
+      "bytes": 1342,
+      "sha256": "04cf38bf94abd3fe1b51e90227e6e235ca74776f6fc6af718bfc149e7424f582"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/progress.tsx",
+      "bytes": 792,
+      "sha256": "6b3b4b69a1cb361076174892e9a96e1a09020307616965ef89f2f7e2495b57a9"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/radio-group.tsx",
+      "bytes": 1410,
+      "sha256": "9ba7808b7404cdf2159c81883a39290033bc4308f2978eb80797c92b87421301"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/resizable.tsx",
+      "bytes": 1723,
+      "sha256": "70d1e35a5fb0897af7063cdd841d8ed636e1c332ef7ea6469f0f175a5a93dddf"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/scroll-area.tsx",
+      "bytes": 1642,
+      "sha256": "d7d02600effca55d0dcadce8c09c97ebddda3a19c5fa1d52dc9f6f727b26c6b1"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/select.tsx",
+      "bytes": 5745,
+      "sha256": "3d93ae07a8f3fe121ba60f4439e26bd7859f247eb8bfcafcf4b4a8a069888eec"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/separator.tsx",
+      "bytes": 756,
+      "sha256": "c956c4cca4b8442fa9314d6079b9f975e1ee39d5804aaf2966990f6258ac342a"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/sheet.tsx",
+      "bytes": 4280,
+      "sha256": "363f8e06aa5b53c6475f445117f60fa9294be79e9e4f1f5bf70886800188124e"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/sidebar.tsx",
+      "bytes": 21846,
+      "sha256": "b023ff6245be1930e152a18c6aaa2b6dd1a11df7b05fcf41bbe483968bfb1c39"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/skeleton.tsx",
+      "bytes": 266,
+      "sha256": "87608e7cc815ad3d88e0b9de6c402bb37b58ea1b38636cf69709da1baff6e334"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/slider.tsx",
+      "bytes": 1037,
+      "sha256": "234e38fef59169bd02d8f5b56ca02e5ec13a0bd6846c328927b924e1299f7fb0"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/sonner.tsx",
+      "bytes": 894,
+      "sha256": "771ab8637d27384c3ed030ba3be01a07b90c791c294eae06646250f8e81bc49e"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/spinner.tsx",
+      "bytes": 331,
+      "sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/switch.tsx",
+      "bytes": 1148,
+      "sha256": "ba5867cd3145af1290edd80bb56d4b6d61c6331aa8ef96ae0b85487f4499feaf"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/table.tsx",
+      "bytes": 2859,
+      "sha256": "a4a6972c2d47d465d7f02c1dc4a6cbfeda7a97e46479c1b0cebdaf26bf9b497a"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/tabs.tsx",
+      "bytes": 1877,
+      "sha256": "6f74706bc6b53f9e4bcebb5e7ab8743b616aef181edc7758b8ee905f9b2fdcd7"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/textarea.tsx",
+      "bytes": 649,
+      "sha256": "ec7c92aaed80f6923a7caa4bfe4eead395b50a7001504fd7fbb0b9381804dae9"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/toast.tsx",
+      "bytes": 4845,
+      "sha256": "99f9f4a3e897f71d89b01c6772b2f5db51b888cecb2c8214fb2c2dbb2b3e6356"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/toaster.tsx",
+      "bytes": 772,
+      "sha256": "1348f1a1f9820e2f1394b93cecc156a7e22f03636ab9270753985549aae2be74"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/toggle-group.tsx",
+      "bytes": 1753,
+      "sha256": "dba95ead40d163af6959198ded9853a2cc9282b2cb534980f99937a65edf4e2d"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/toggle.tsx",
+      "bytes": 1486,
+      "sha256": "955fa1bb97505b7a8bba3f7cff1991035a9afa0e1113f5d598147e6369dbf44b"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/components/ui/tooltip.tsx",
+      "bytes": 1267,
+      "sha256": "ce6afa34fb9dae51053a863b4c3f7c6e55f3da23b00149f31a8e4402bc963be0"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/data/exames.ts",
+      "bytes": 42359,
+      "sha256": "6053e65f264aaf9b6d7dccad3fe8ac50ca7b8fa804b801b444e89c2208c9a249"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/AppContext.tsx",
+      "bytes": 5162,
+      "sha256": "89866266076676b28da99e281d551372bbb0b5189ac88036ee152d0f1a1f40a8"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/auth.ts",
+      "bytes": 97,
+      "sha256": "dea3921063a058fa41d2a469493936a02baedfbb3ad3c9585336f54b1559b868"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/DashboardView.tsx",
+      "bytes": 36908,
+      "sha256": "98b7e95bb7f4ff4c76de63b7df94075638949a6b093b6d56de77a019a9c43403"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/data.ts",
+      "bytes": 7816,
+      "sha256": "0314080939ed257566ac02c5678f591c14ae897fdba4f3c41ac959773ef2ae98"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/FarmaciaSystem.tsx",
+      "bytes": 57483,
+      "sha256": "573b66d69fb5d960661126395b3a53e5fb2a96773e569bb2d386811f4b2a7510"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/Faturacao.tsx",
+      "bytes": 295939,
+      "sha256": "fc82def69b68c24a57f91e7e5744236352765743285931ffd2a534950598e085"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/faturaGenerator.ts",
+      "bytes": 3906,
+      "sha256": "1a7dde266af06968478f4c6f024922d4e114c5e240218724a1c1587023d96cdf"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/Header.tsx",
+      "bytes": 5693,
+      "sha256": "ff035f32a34314c3e7763722f35c84f46d5c0ef11d5da415eaac7f64ea3d33a0"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/ManagementView.tsx",
+      "bytes": 98961,
+      "sha256": "eb454355faaa9f949e685ae354c4f2bb3ebc84a3f4dc6d71749d515681255891"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/POSView.tsx",
+      "bytes": 33069,
+      "sha256": "e7f9844b2ce4b6cfcfeedce8ad32a8390b82a9c24635bd33da35c10f01051df6"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/Sidebar.tsx",
+      "bytes": 4833,
+      "sha256": "14ffb57230183092a5433ff40b4cd3701f83315f26e026269c888c58242b5023"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/storage.ts",
+      "bytes": 1023,
+      "sha256": "dea6d4da876861a67c07c9356f3dee5a31f8f18434bb81541e28db68882df9a7"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/farmsys/types.ts",
+      "bytes": 2637,
+      "sha256": "38c8899664b70a4579e77641c507bab5e910c022804844105e5eb2f7b8c47bbc"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/hooks/use-mobile.tsx",
+      "bytes": 565,
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/hooks/use-toast.ts",
+      "bytes": 3895,
+      "sha256": "5aab0623ee24bddf9420c259a23a06996292e38ea70eccbac2715516f6d01a0b"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/index.css",
+      "bytes": 3423,
+      "sha256": "2e12f945dbe6a16f030c2a49f39b5797a12a1df3fcc9073914b8322075d73f54"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/lib/utils.ts",
+      "bytes": 166,
+      "sha256": "7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/main.tsx",
+      "bytes": 157,
+      "sha256": "29946f51942fba11605c7595fd82b50b0d7e50148e0194fd356dacbc958f18ec"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/AdminEmpresas.tsx",
+      "bytes": 32583,
+      "sha256": "e5005caf0e4a0021de976b97de155ad2e7d2c6b843a74fbc4f782dd61d2977ec"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/AdminFuncionarios.tsx",
+      "bytes": 15236,
+      "sha256": "87b51ab67927fef1a7631f8e410dbd814112f7615a9fcc168665c218ab46037e"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/CadastrarExames.tsx",
+      "bytes": 43724,
+      "sha256": "5a0d426cd59d2b44133931acea8404711042e47509ee91312b1f80c2b50584f7"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Configuracoes.tsx",
+      "bytes": 28227,
+      "sha256": "3d62d3483e86ffecc1be167dc27759a08b0ff7dfd082abd0934fef99def8a284"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/ContaCorrente.tsx",
+      "bytes": 14102,
+      "sha256": "ae788fb555c1b30872ba0541947046ff3182234599a91f970014a27ed0b965c2"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Dashboard.tsx",
+      "bytes": 13732,
+      "sha256": "6a430b6c548bfb957efdab805f48824773b4910e808d5947cf2b368b872d2fec"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Enfermagem.tsx",
+      "bytes": 212024,
+      "sha256": "a7d3a81aead31d336bc177ca2ffad27b4ec49400e88d83945478c4160ed89f27"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Farmacia.tsx",
+      "bytes": 286,
+      "sha256": "bf55fb78be85a7013c4656e6c34ca6f83e6e8badc96aff3343618842c9c8c26f"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Faturacao.tsx",
+      "bytes": 111924,
+      "sha256": "640b5e797daf415a717c5bd2aee1b758613244702bfd830717d56a443068fb36"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/FUNDO.png",
+      "bytes": 1189700,
+      "sha256": "d4915bf734506a8c17aae4c4428cf3da6f7f9cc6c0d86d51b622bcf433d8d4b7"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/GestaParceiros.tsx",
+      "bytes": 11096,
+      "sha256": "6608c88e8b58237dd5798b153a0075f3b163334638d28f2ee6f0a075d23e3100"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/GestaProdutos.tsx",
+      "bytes": 26936,
+      "sha256": "4526782a37bbf13314ee42d90cb1ba5d262d4c699085ba627468d697716aecce"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/GestaStock.tsx",
+      "bytes": 43423,
+      "sha256": "41ee7f53b2e3f4dae9845d79b0bfb3206c706487397ef9e85339c335a4f4a3dd"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Historico.tsx",
+      "bytes": 53084,
+      "sha256": "83104f4ab33aea419df5466294501615793d6a611f49cd098f3b44c896156c84"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Imagiologia.tsx",
+      "bytes": 21486,
+      "sha256": "bb00ba290bb8874d95857b467a46ef9a467126d5bee3220abb27cedc0e74372d"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/LancarResultados.tsx",
+      "bytes": 82998,
+      "sha256": "97b3fdf9893bbf2298b1be7870ea6dbf0a2695c306b5a23947bc7b2fd9c75ba8"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Login.tsx",
+      "bytes": 13103,
+      "sha256": "8e3f8f91b39944ca310329d0c820e1f557330b7535d547b9645711f43113ce42"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Logo.png",
+      "bytes": 1105336,
+      "sha256": "47a9990d2f1e340d284aac28d51d1a3dcc8fc7cd42a44c4778da214b6b39fb59"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Medico.tsx",
+      "bytes": 114018,
+      "sha256": "c68534ecdd16b56b47c69a0820c3c3bea47c86f678cbe52e2bbe6879068a807f"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/not-found.tsx",
+      "bytes": 711,
+      "sha256": "718a41bd05a163d1db32480aba013f5fe754894e656b6542a8e4b302275b172e"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/nvualasot (1).zip",
+      "bytes": 805710,
+      "sha256": "523da0fe8d719a82f7dfc095980813f137bf84ee521e21afd40bd591f88f9b73"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Pacientes.tsx",
+      "bytes": 55507,
+      "sha256": "86f35e06601611cdb5c20b41514ede6c001296cf6b54378cf94f0bdf4bd2872b"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/PortalParceiro.tsx",
+      "bytes": 49057,
+      "sha256": "e1e4c604b0aa61cef62dbc5e91d47c530c3f8826c514140e6ceb9ca143a2f83f"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/pages/Recepcao.tsx",
+      "bytes": 6291,
+      "sha256": "87f1a057cb9e951bfb9c46bcf9b04f23c25d7251b4b125ab68a57b24a8c1b2c6"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/store/api.ts",
+      "bytes": 7557,
+      "sha256": "cb3cc34bbf6d347ba315f8f6460285cf937b05896215de9325610a4fc845df65"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/store/AppContext.tsx",
+      "bytes": 12938,
+      "sha256": "9b277c2db55def53ffd51f0ce009dc0339367a07017c8a6b32f64a744a6d77b4"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/store/auth.ts",
+      "bytes": 2060,
+      "sha256": "3beca66ccbe51432a47d926dcc54659545dcad466f8df1f6f20585d49bc73067"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/store/defaults.ts",
+      "bytes": 354,
+      "sha256": "ade2fb2f6f14401a63d2869df1cd60a73d48dd20216cd47367dd2ad7057bc9ae"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/store/storage.ts",
+      "bytes": 505,
+      "sha256": "6f101f0e773af8e99ce39428f5a77496af97e31746f3583fa8250ad1b8988191"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/utils/faturaGenerator.ts",
+      "bytes": 19338,
+      "sha256": "ed676f47bc3a3b286bbbbde48fb1b5abb44583dfe94c4879d2941ea1061a03a8"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/utils/listPdfGenerator.ts",
+      "bytes": 10900,
+      "sha256": "1ac84237d6ae254b1bd9b3b3f81dfd6785a3a1c251e6f252421197c5dc37d4d5"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/utils/pdfGenerator.ts",
+      "bytes": 10150,
+      "sha256": "2e0a1a74ee58ba82f8c25cf6fef504ef18135789a8307b3e51a4ea628c90dff6"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/utils/seedProdutos.ts",
+      "bytes": 17930,
+      "sha256": "6cabefde6de0cccf08a7ea3d84e3c2fc89cf5bfdd749560e6f5e695261e5aafa"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/src/utils/zipExport.ts",
+      "bytes": 40405,
+      "sha256": "ac1afe4f553e891da2e3405a3783bf65e87f080a0a8e2a8ba54239c562fab3c4"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/tsconfig.json",
+      "bytes": 584,
+      "sha256": "d523a48a5e89f542cbb503706209b2f987b284255670f94f9b7a0c0275b85499"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/Laoboratório/lab-results/vite.config.ts",
+      "bytes": 1761,
+      "sha256": "51bf274ad0697b292f45c630ebd1061f62013882bd386bf0a65daffe7afb4d13"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/MovimentacoesView.tsx",
+      "bytes": 15068,
+      "sha256": "7fdc2fa703719d6675159f8e99ebdc6c76506d398fab2e45a768aedd0d6e2f13"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/POSView.tsx",
+      "bytes": 306635,
+      "sha256": "49ab5c7f40a5ed0ff97eab8ae785dc803063666663f4bcdecca284b0d1740266"
+    },
+    {
+      "file": "artifacts/facturacao-stock/src/views/ValidadeAlertasView.tsx",
+      "bytes": 19956,
+      "sha256": "6d44af1fd6d2ba57c02db54a30f928c60b4a9710b7f4c0cb4f8fe4cc4e9041f4"
+    },
+    {
+      "file": "artifacts/facturacao-stock/tsconfig.json",
+      "bytes": 520,
+      "sha256": "e0a2fd8a7f3bfc860ccab5623b1881e754eb02336612708ff8b59215e8c256c9"
+    },
+    {
+      "file": "artifacts/facturacao-stock/tsconfig.tsbuildinfo",
+      "bytes": 151731,
+      "sha256": "342cfcc2743d65b78e280f410e65ce4fc717b6997c5c6de8423f85260e5dd651"
+    },
+    {
+      "file": "artifacts/facturacao-stock/vite.config.ts",
+      "bytes": 1803,
+      "sha256": "4f7c94d802c4f2d5f5c92e051ac99f5701d62d518a8cb412b9ae094879e0a4f7"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/.replit-artifact/artifact.toml",
+      "bytes": 327,
+      "sha256": "e259a07aa72cd0a1d06c141f4aa00c16aa6942443ddf17b7cb59e88a9882f4f9"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/.tsbuildinfo",
+      "bytes": 221306,
+      "sha256": "2427e75d5c976f5d4562fdc053a7efb2e8970ac299ad35922f50886a82fcb123"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/components.json",
+      "bytes": 426,
+      "sha256": "aa1b56411ed0e8fc2ac14315f211c7059406e03d68666e1921f640186b8c096f"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/index.html",
+      "bytes": 4325,
+      "sha256": "fa4111c44a19ea399d44d7c6486387ffd49d9f21459ac87906ded4dd5c2bcb6c"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/mockupPreviewPlugin.ts",
+      "bytes": 4639,
+      "sha256": "4d579d37f3d3d12ec8d8d78571b651c606ed44b07fb04a53aff02bcc75621cfd"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/package.json",
+      "bytes": 2516,
+      "sha256": "36f88ddebf453866752c5f0240ce75d2f0c1e9e047237c0fffeac5c91086d1d2"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/.generated/mockup-components.ts",
+      "bytes": 171,
+      "sha256": "2c23d71ff9b2704c9db9aff8a414a728b810b10abc508e3bd75acf5718651cec"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/App.tsx",
+      "bytes": 3654,
+      "sha256": "0e0e60da88a64ef68a930565bb5c5d326896aaa0f9cea62702eef4c02db2462a"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/accordion.tsx",
+      "bytes": 2001,
+      "sha256": "dcbfb3243a26096fc3e5f54039ccb5c4c23d9bb79a4d5846b4be75bf912f07d9"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/alert-dialog.tsx",
+      "bytes": 4419,
+      "sha256": "311bede35f785d7b1ecd7398986757e26409d1049352a94ccf83586b8603c92d"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/alert.tsx",
+      "bytes": 1598,
+      "sha256": "5950ac01377e7eedc94b00eb3fee678745e4cc1a72b5343867f0733d07db6660"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/aspect-ratio.tsx",
+      "bytes": 140,
+      "sha256": "08b0aa0b05efc573c7d63363c03e83d4b101bfeb54140764e96ddea30659cfcc"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/avatar.tsx",
+      "bytes": 1419,
+      "sha256": "e78b35ed76c67d8ff50603fbe0dfa4fe600097bd860d89e65beea3e16683dad8"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/badge.tsx",
+      "bytes": 1163,
+      "sha256": "0564174ab513773e924dda521ce205535b05c7df9842e331ebbb59dd8b86022d"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/breadcrumb.tsx",
+      "bytes": 2712,
+      "sha256": "c3d3dcb0d82fc5e91d8830bac7fead905686fe876f1f42c3ed872bb0a6b6584e"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/button-group.tsx",
+      "bytes": 2209,
+      "sha256": "e3716d270e9ef6457b5cd29464ae00194abc8093c08ebf726c9204d7a69231d9"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/button.tsx",
+      "bytes": 1925,
+      "sha256": "4ea01d60fddbf1a0e66aa8234807d010378786b9bc5a934ed76a09edfa671040"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/calendar.tsx",
+      "bytes": 7569,
+      "sha256": "787a19c855cf2b826942d25440b63150c45094154c6a40e95abdb4109298b8b4"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/card.tsx",
+      "bytes": 1828,
+      "sha256": "525c4bb2c051987be64df0e92e1d90174912b219bf541e24ffbc4a3406de49e8"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/carousel.tsx",
+      "bytes": 6210,
+      "sha256": "5a4ff73c804e86c873382da80c453f1399006326ef042fb984c24162ec86666e"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/chart.tsx",
+      "bytes": 10674,
+      "sha256": "74005899ffa62cff5cc71ddd72a727bdc84a9bd9b7e26901e1f10d2ca8d90b62"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/checkbox.tsx",
+      "bytes": 1031,
+      "sha256": "ac389a574651c8bedffc10f80674c5fc2f02ab81291a5f4ad9c587d1f775fdce"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/collapsible.tsx",
+      "bytes": 329,
+      "sha256": "f4cdd104de29928bfcd40b865c7d08eed9157a537fbb8b5e6d0921f02b63cc04"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/command.tsx",
+      "bytes": 4887,
+      "sha256": "5a57ebc119f2357b097098d22865d45de8fda623ee88fe98b99999838c13633b"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/context-menu.tsx",
+      "bytes": 7406,
+      "sha256": "5369fc82c51df067aec2934f5e711aaf9e3f745ed7baadd7ba4b77397dee2a1b"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/dialog.tsx",
+      "bytes": 3835,
+      "sha256": "f9c982ed8114c253c6ca738043d3f455e89c6d65569e90c9415776d6b4d6be14"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/drawer.tsx",
+      "bytes": 3007,
+      "sha256": "47ff6248307a4ac09bf7e00181a2a29f9f846691092e04cad03e15d749bc249b"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/dropdown-menu.tsx",
+      "bytes": 7606,
+      "sha256": "dc109123ecd59af01d07aa9f3a8e8a7085bd3f337388c5369799ab1ce6c2d45f"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/empty.tsx",
+      "bytes": 2396,
+      "sha256": "9f975582a0290dbc7ce6efa3b36b376a4c3f07863026c3b74c1e73cb0023acb8"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/field.tsx",
+      "bytes": 6044,
+      "sha256": "e463611ab049c5e9b1c61691d239e05970ead7b577a191b3f80aa6f8ffccada9"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/form.tsx",
+      "bytes": 4175,
+      "sha256": "d50adf86568f76246f0f319c9e1e858627475563f6c1e38f5df7d4ee23958559"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/hover-card.tsx",
+      "bytes": 1237,
+      "sha256": "00f9086b1412843e04e01d31d2fab00a25d65d789d1a382e41f01b1f3c167c3b"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/input-group.tsx",
+      "bytes": 4883,
+      "sha256": "131052098fa8b16b423192ec7dcc8c8506f0e7e81355134aae4c9044e1d3ef95"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/input-otp.tsx",
+      "bytes": 2143,
+      "sha256": "7c4799e3597f2780c09a39a1391b921fa16eaedd0476457492af734f58e2ec98"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/input.tsx",
+      "bytes": 768,
+      "sha256": "6299a6a387dc55e528aec4342deaea0b83f1ea3a365c135a31a18ee55334f441"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/item.tsx",
+      "bytes": 4494,
+      "sha256": "90983640aa7cfef8217422347d8e14825cf55137c76369decacf440767f03188"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/kbd.tsx",
+      "bytes": 862,
+      "sha256": "0c025e7736d435f563bfb44105e562629672799eb1f35cbf194148d06cd1a9f7"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/label.tsx",
+      "bytes": 724,
+      "sha256": "2eac8fbb04002c42b0fbc4062d20d131e421796eaf65c37d2049e29e42ecbc5a"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/menubar.tsx",
+      "bytes": 8608,
+      "sha256": "def61eb2c47c9ec319423471f4ca20045e99549958211cacf832e4ede769e484"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/navigation-menu.tsx",
+      "bytes": 5124,
+      "sha256": "a06d96a582ac207ffcd38445d773c05e841d646efb185b5e9b65f73e5bd388c7"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/pagination.tsx",
+      "bytes": 2751,
+      "sha256": "9506dbd19ddd0c2810d1c9668a3f01606e39d9bf33ddc43329523c03bf629012"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/popover.tsx",
+      "bytes": 1342,
+      "sha256": "04cf38bf94abd3fe1b51e90227e6e235ca74776f6fc6af718bfc149e7424f582"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/progress.tsx",
+      "bytes": 792,
+      "sha256": "6b3b4b69a1cb361076174892e9a96e1a09020307616965ef89f2f7e2495b57a9"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/radio-group.tsx",
+      "bytes": 1410,
+      "sha256": "9ba7808b7404cdf2159c81883a39290033bc4308f2978eb80797c92b87421301"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/resizable.tsx",
+      "bytes": 1723,
+      "sha256": "70d1e35a5fb0897af7063cdd841d8ed636e1c332ef7ea6469f0f175a5a93dddf"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/scroll-area.tsx",
+      "bytes": 1642,
+      "sha256": "d7d02600effca55d0dcadce8c09c97ebddda3a19c5fa1d52dc9f6f727b26c6b1"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/select.tsx",
+      "bytes": 5745,
+      "sha256": "3d93ae07a8f3fe121ba60f4439e26bd7859f247eb8bfcafcf4b4a8a069888eec"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/separator.tsx",
+      "bytes": 756,
+      "sha256": "c956c4cca4b8442fa9314d6079b9f975e1ee39d5804aaf2966990f6258ac342a"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/sheet.tsx",
+      "bytes": 4280,
+      "sha256": "363f8e06aa5b53c6475f445117f60fa9294be79e9e4f1f5bf70886800188124e"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/sidebar.tsx",
+      "bytes": 21056,
+      "sha256": "53c5391594a46de2c3161de40eb56953ff6ddb09a9c64b877ea98af810b0ed35"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/skeleton.tsx",
+      "bytes": 266,
+      "sha256": "87608e7cc815ad3d88e0b9de6c402bb37b58ea1b38636cf69709da1baff6e334"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/slider.tsx",
+      "bytes": 1037,
+      "sha256": "234e38fef59169bd02d8f5b56ca02e5ec13a0bd6846c328927b924e1299f7fb0"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/sonner.tsx",
+      "bytes": 894,
+      "sha256": "771ab8637d27384c3ed030ba3be01a07b90c791c294eae06646250f8e81bc49e"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/spinner.tsx",
+      "bytes": 331,
+      "sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/switch.tsx",
+      "bytes": 1148,
+      "sha256": "ba5867cd3145af1290edd80bb56d4b6d61c6331aa8ef96ae0b85487f4499feaf"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/table.tsx",
+      "bytes": 2859,
+      "sha256": "a4a6972c2d47d465d7f02c1dc4a6cbfeda7a97e46479c1b0cebdaf26bf9b497a"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/tabs.tsx",
+      "bytes": 1877,
+      "sha256": "6f74706bc6b53f9e4bcebb5e7ab8743b616aef181edc7758b8ee905f9b2fdcd7"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/textarea.tsx",
+      "bytes": 649,
+      "sha256": "ec7c92aaed80f6923a7caa4bfe4eead395b50a7001504fd7fbb0b9381804dae9"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/toast.tsx",
+      "bytes": 4845,
+      "sha256": "99f9f4a3e897f71d89b01c6772b2f5db51b888cecb2c8214fb2c2dbb2b3e6356"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/toaster.tsx",
+      "bytes": 772,
+      "sha256": "1348f1a1f9820e2f1394b93cecc156a7e22f03636ab9270753985549aae2be74"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/toggle-group.tsx",
+      "bytes": 1753,
+      "sha256": "dba95ead40d163af6959198ded9853a2cc9282b2cb534980f99937a65edf4e2d"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/toggle.tsx",
+      "bytes": 1486,
+      "sha256": "955fa1bb97505b7a8bba3f7cff1991035a9afa0e1113f5d598147e6369dbf44b"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/components/ui/tooltip.tsx",
+      "bytes": 1267,
+      "sha256": "ce6afa34fb9dae51053a863b4c3f7c6e55f3da23b00149f31a8e4402bc963be0"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/hooks/use-mobile.tsx",
+      "bytes": 565,
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/hooks/use-toast.ts",
+      "bytes": 3767,
+      "sha256": "eb23d01c5e502ae1e0772f4303147170811b11f498c7e8f0dc8424c0f3463c94"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/index.css",
+      "bytes": 5760,
+      "sha256": "3935d982402c0101e55b60039685383ade4fd25227d2f4149ba356e6c2932aa3"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/lib/utils.ts",
+      "bytes": 166,
+      "sha256": "7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/src/main.tsx",
+      "bytes": 157,
+      "sha256": "29946f51942fba11605c7595fd82b50b0d7e50148e0194fd356dacbc958f18ec"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/tsconfig.json",
+      "bytes": 513,
+      "sha256": "bd0a1d0c1afa46c590350664a29d7848f6ccb91cfbd76426c40798437369fbf0"
+    },
+    {
+      "file": "artifacts/mockup-sandbox/vite.config.ts",
+      "bytes": 1592,
+      "sha256": "7de0f52b190e4d8f0854ed852e7a0d24420b4242e22423c6dd2712e7b0497cc7"
+    },
+    {
+      "file": "artifacts/TS.tsx",
+      "bytes": 93972,
+      "sha256": "0aae7d6441928d827d22a528dd3a6381ea7bfbb7dd46e19b4f764bbe2f275d39"
+    }
+  ],
+  "note": "Original directory paths preserved. No production integration."
+}

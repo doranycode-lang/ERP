@@ -1,0 +1,181 @@
+const BASE = "/api";
+
+function tokenKey(): string {
+  const path = window.location.pathname;
+  if (path.includes("/admin")) return "lab_token_dev_v4";
+  if (path.includes("/parceiro")) return "lab_token_par_v4";
+  return "lab_token_emp_v4";
+}
+
+function getToken(): string | null {
+  return localStorage.getItem(tokenKey());
+}
+
+function setToken(t: string | null) {
+  if (t) localStorage.setItem(tokenKey(), t);
+  else localStorage.removeItem(tokenKey());
+}
+
+function headers(): Record<string, string> {
+  const t = getToken();
+  const h: Record<string, string> = { "Content-Type": "application/json" };
+  if (t) h["Authorization"] = `Bearer ${t}`;
+  return h;
+}
+
+async function req<T>(method: string, path: string, body?: unknown): Promise<T> {
+  const res = await fetch(`${BASE}${path}`, {
+    method,
+    headers: headers(),
+    body: body !== undefined ? JSON.stringify(body) : undefined,
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ error: res.statusText }));
+    throw new Error(err.error || res.statusText);
+  }
+  return res.json();
+}
+
+export const api = {
+  getToken,
+  setToken,
+
+  auth: {
+    login: (username: string, password: string) =>
+      req<{ token: string; role: string; empresaId?: string; empresaNome?: string; username: string; funcao?: string; funcionarioId?: string; funcionarioNome?: string; parceiroId?: string; parceiroNome?: string; parceiroInstituicao?: string }>("POST", "/auth/login", { username, password }),
+    logout: () => req("POST", "/auth/logout"),
+    me: () => req<{ role: string; empresaId?: string; empresaNome?: string; username: string; funcao?: string; funcionarioId?: string; funcionarioNome?: string; parceiroId?: string; parceiroNome?: string; parceiroInstituicao?: string }>("GET", "/auth/me"),
+  },
+
+  empresas: {
+    list: () => req<any[]>("GET", "/empresas"),
+    create: (data: any) => req<any>("POST", "/empresas", data),
+    update: (id: string, data: any) => req<any>("PUT", `/empresas/${id}`, data),
+    delete: (id: string) => req("DELETE", `/empresas/${id}`),
+    listFuncionarios: (id: string) => req<any[]>("GET", `/empresas/${id}/funcionarios`),
+    createFuncionario: (id: string, data: any) => req<any>("POST", `/empresas/${id}/funcionarios`, data),
+    updateFuncionario: (id: string, fid: string, data: any) => req<any>("PUT", `/empresas/${id}/funcionarios/${fid}`, data),
+    deleteFuncionario: (id: string, fid: string) => req("DELETE", `/empresas/${id}/funcionarios/${fid}`),
+    listParceiros: (id: string) => req<any[]>("GET", `/empresas/${id}/parceiros`),
+    createParceiro: (id: string, data: any) => req<any>("POST", `/empresas/${id}/parceiros`, data),
+    updateParceiro: (id: string, pid: string, data: any) => req<any>("PUT", `/empresas/${id}/parceiros/${pid}`, data),
+    deleteParceiro: (id: string, pid: string) => req("DELETE", `/empresas/${id}/parceiros/${pid}`),
+  },
+
+  parceiros: {
+    list: () => req<any[]>("GET", "/parceiros"),
+    create: (data: any) => req<any>("POST", "/parceiros", data),
+    update: (id: string, data: any) => req<any>("PUT", `/parceiros/${id}`, data),
+    delete: (id: string) => req("DELETE", `/parceiros/${id}`),
+  },
+
+  solicitacoes: {
+    listLab: () => req<any[]>("GET", "/solicitacoes"),
+    listMinhas: () => req<any[]>("GET", "/solicitacoes/minhas"),
+    create: (data: any) => req<any>("POST", "/solicitacoes", data),
+    updateEstado: (id: number | string, estado: string, resultadoId?: number) =>
+      req<any>("PUT", `/solicitacoes/${id}`, { estado, resultadoId }),
+    getResultado: (id: number | string) =>
+      req<{ resultado: any; paciente: any | null }>("GET", `/solicitacoes/${id}/resultado`),
+  },
+
+  parceiroPacientes: {
+    list: () => req<any[]>("GET", "/parceiro/pacientes"),
+    create: (data: any) => req<any>("POST", "/parceiro/pacientes", data),
+    update: (id: string, data: any) => req<any>("PUT", `/parceiro/pacientes/${id}`, data),
+    delete: (id: string) => req("DELETE", `/parceiro/pacientes/${id}`),
+  },
+
+  sucursais: {
+    list: () => req<any[]>("GET", "/sucursais"),
+    create: (data: any) => req<any>("POST", "/sucursais", data),
+    delete: (id: string) => req("DELETE", `/sucursais/${id}`),
+    stats: (id: string) => req<any>("GET", `/sucursais/${id}/stats`),
+  },
+
+  config: {
+    get: () => req<any>("GET", "/config"),
+    update: (data: any) => req<any>("PUT", "/config", data),
+  },
+
+  pacientes: {
+    list: () => req<any[]>("GET", "/pacientes"),
+    create: (data: any) => req<any>("POST", "/pacientes", data),
+    update: (id: number, data: any) => req<any>("PUT", `/pacientes/${id}`, data),
+    delete: (id: number) => req("DELETE", `/pacientes/${id}`),
+  },
+
+  resultados: {
+    list: () => req<any[]>("GET", "/resultados"),
+    create: (data: any) => req<any>("POST", "/resultados", data),
+    update: (id: number, data: any) => req<any>("PUT", `/resultados/${id}`, data),
+    delete: (id: number) => req("DELETE", `/resultados/${id}`),
+  },
+
+  faturas: {
+    list: () => req<any[]>("GET", "/faturas"),
+    create: (data: any) => req<any>("POST", "/faturas", data),
+    update: (id: number, data: any) => req<any>("PUT", `/faturas/${id}`, data),
+    delete: (id: number) => req("DELETE", `/faturas/${id}`),
+  },
+
+  movimentos: {
+    list: () => req<any[]>("GET", "/movimentos"),
+    create: (data: any) => req<any>("POST", "/movimentos", data),
+    delete: (id: number) => req("DELETE", `/movimentos/${id}`),
+  },
+
+  produtos: {
+    list: () => req<any[]>("GET", "/produtos"),
+    create: (data: any) => req<any>("POST", "/produtos", data),
+    update: (id: number, data: any) => req<any>("PUT", `/produtos/${id}`, data),
+    delete: (id: number) => req("DELETE", `/produtos/${id}`),
+  },
+
+  examesCustom: {
+    list: () => req<any[]>("GET", "/exames-custom"),
+    create: (data: any) => req<any>("POST", "/exames-custom", data),
+    update: (id: number, data: any) => req<any>("PUT", `/exames-custom/${id}`, data),
+    delete: (id: number) => req("DELETE", `/exames-custom/${id}`),
+  },
+
+  reagentes: {
+    list: () => req<any[]>("GET", "/reagentes"),
+    create: (data: any) => req<any>("POST", "/reagentes", data),
+    update: (id: number, data: any) => req<any>("PUT", `/reagentes/${id}`, data),
+    delete: (id: number) => req("DELETE", `/reagentes/${id}`),
+  },
+
+  stockMovimentos: {
+    list: () => req<any[]>("GET", "/stock-movimentos"),
+    create: (data: any) => req<any>("POST", "/stock-movimentos", data),
+    delete: (id: number) => req("DELETE", `/stock-movimentos/${id}`),
+  },
+
+  triagem: {
+    list: () => req<any[]>("GET", "/triagem"),
+    create: (data: any) => req<any>("POST", "/triagem", data),
+    update: (id: number, data: any) => req<any>("PUT", `/triagem/${id}`, data),
+    delete: (id: number) => req("DELETE", `/triagem/${id}`),
+  },
+
+  imagiologia: {
+    list: () => req<any[]>("GET", "/imagiologia"),
+    create: (data: any) => req<any>("POST", "/imagiologia", data),
+    update: (id: number, data: any) => req<any>("PUT", `/imagiologia/${id}`, data),
+    delete: (id: number) => req("DELETE", `/imagiologia/${id}`),
+  },
+
+  medicamentos: {
+    list: () => req<any[]>("GET", "/medicamentos"),
+    create: (data: any) => req<any>("POST", "/medicamentos", data),
+    update: (id: number, data: any) => req<any>("PUT", `/medicamentos/${id}`, data),
+    delete: (id: number) => req("DELETE", `/medicamentos/${id}`),
+  },
+
+  dispensacoes: {
+    list: () => req<any[]>("GET", "/dispensacoes"),
+    create: (data: any) => req<any>("POST", "/dispensacoes", data),
+    delete: (id: number) => req("DELETE", `/dispensacoes/${id}`),
+  },
+};
