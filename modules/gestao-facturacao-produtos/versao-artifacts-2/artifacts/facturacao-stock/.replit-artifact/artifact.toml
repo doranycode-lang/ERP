@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Facturação e Gestão de Stock"
+description = "Aplicação offline de facturação, gestão de stock, clientes, lotes, validade, movimentações e relatórios para operações de electromedicina."
+version = "1.0.0"
+id = "artifacts/facturacao-stock"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24739
+
+[services.development]
+run = "pnpm --filter @workspace/facturacao-stock run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/facturacao-stock", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/facturacao-stock/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24739"
+BASE_PATH = "/"

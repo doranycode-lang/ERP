@@ -1,0 +1,11 @@
+# Netlify deployment for the erp-app package in this pnpm monorepo.
+# Paths are relative to the repository root (the default Netlify base).
+[build]
+  command = "pnpm --filter @workspace/erp-app... run build"
+  publish = "artifacts/erp-app/dist/public"
+
+# Front-end client-side routes must load the application entry point.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

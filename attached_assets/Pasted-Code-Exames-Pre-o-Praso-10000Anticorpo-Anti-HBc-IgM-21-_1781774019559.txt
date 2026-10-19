@@ -1,0 +1,271 @@
+Code Exames Preço Praso
+10000Anticorpo Anti HBc IgM 21 321,50      24h
+10001Anticorpo Anti  HBc Total  IgG 21 321,50      24h
+10002Anticorpo Anti HBe 21 312,50      24h
+10003Anticorpo Anti HBS 21 312,50      24h
+10004Antignio HBe 21 312,50      24h
+10005Antigenio Carcino Ambrionario 22 687,50      24h
+10006Acido Urico na urina 29 562,50      24h
+10007Acido Urico 6 875,00        24h
+10008APTT 17 325,00      24h
+10009Alfa Feto Proteina 28 187,50      24h
+10010Chlamydia em exsudado 13 062,50      24h
+10011Chlamydia no Soro 11 687,50      24h
+10012Albumina na urina de 24h 7 012,50        24h
+10013Aldolase 15 675,00      24h
+10014Albumina 6 325,00        24h
+10015GPT 8 250,00        24h
+10016GOT 8 250,00        24h
+10017GGT 8 250,00        24h
+10018Amilase pencreatica 13 818,75      24h
+10019Baciloscopia 1º amostra 27 500,00      24h
+10020Baciloscopia 2º amosta 27 500,00      24h
+10021Baciloscopia 3º amostra 27 500,00      24h
+10022Biluribina Direta 6 325,00        24h
+10023Biluribina Total 6 325,00        24h
+10024Biopia Aspirativia Por Gulia 49 500,00      15 Dias
+10025Biopsia 173 825,85    30 Dias 
+10026CA 125 27 912,50      48h
+10027CA 15,3 27 912,50      48h
+10028CA 19,9 27 912,50      48h
+10029Calcio 6 875,00        24h
+10030Carga viral de HCV 173 250,00    15 Dias
+10031Carga viral de HIV 173 250,00    15 Dias
+10032Carga Viral De Virus de Hepatite B 173 250,00    15 Dias
+10033Chlor na urina de 24h 7 562,50        24h
+10034Chlor 7 562,50        24h
+10035CK 10 312,50      24h
+10036CKMB 33 000,00      48h
+10037CMV (Citomegalovirus) IgG 33 000,00      48h
+10038CMV (Citomegalovirus) IgM 33 000,00      48h
+10039Colesterol HDL 8 937,50        24h
+10040Colesterol LDL 8 937,50        24h
+10041Colesterol Total 6 325,00        24h
+10042Colesterol VLDL 8 937,50        24h
+10043Contagem de Reticulocitos 14 437,50      24h
+10044Contagem de CD3/CD4/CD8 165 550,00    5 dias 
+10045Contagem de Addis na urina de 3h 22 412,50      24h
+10046Contagem de Eosinofilo 11 000,00      24h
+10047Contagem de Plaquetas 11 687,50      24h
+10048Coagulograma competo 35 062,50      24h
+10049Cortisol 31 212,50      48h
+10050Creatinina na urina de 7 562,50        24h
+10052Creatinina 6 325,00        24h
+10053Chikungunya 13 062,25      24h
+10054PCR (Proteina C reactiva) 9 006,25        24h
+10055Cultura Bacteriológica 24 475,00      3 - 5 Dias
+10056Cultura da Ferida 24 475,00      3 - 5 Dias
+10057Coprocultura 1* Amostra 24 475,00      3 - 5 Dias
+10058Coprocultura 2* Amostra 24 475,00      3 - 5 Dias
+10059Coprocultura 3*  Amostra 24 475,00      3 - 5 Dias
+10063Hemocultura 55 000,00      14 Dias
+10064 cultura de Secreções de ouvido 24 475,00      3 - 5 Dias
+10065Cultura de Secreções Vaginal 27 225,00      3 - 5 Dias
+10066Cultura de secreções Uretral 27 225,00      3 - 5 Dias
+10067Cultura de secreções ocular 28 600,00      3 - 5 Dias
+10068Cultura de secreções nasofaringe 28 600,00      3 - 5 Dias
+10069Cultura de secreções purulenta 28 600,00      3 - 5 Dias
+10070Cultura de secreções Traqueal 28 600,00      3 - 5 Dias
+10071Cultura de secreções Endosevical 28 600,00      3 - 5 Dias
+10072Cultura de Expectoraçao 28 600,00      14 Dias
+10073Cultura de lavado bronco Alveolar 28 600,00      3 - 5 Dias
+10074Cultura de Líquido biliar 28 600,00      3 - 5 Dias
+10075Cultura de Líquido Cefalo-Raquidiano (LCR) 28 600,00      3 - 5 Dias
+10076Cultura de Líquido Pericardico 28 600,00      3 - 5 Dias
+10078Cultura do Líquido Áscitico 28 600,00      3 - 5 Dias
+10079Cultura do Líquido Pleural 28 600,00      3 - 5 Dias
+10081Cultura do Líquido Sinovial 28 600,00      3 - 5 Dias
+10082Cultura Mycologica 35 475,00      14 Dias
+10060D-Dimeiro 26 375,00      48h
+10083Dengue IgM/IgG 12 375,00      24h
+10084Densidade Urinaria 7 562,50        24h
+10085Depuração da Creatinina 14 437,50      24h
+10086Electrofore de Hemoglobina 28 875,00      5 - 7 Dias
+10087Electroforese Urinaria 28 875,00      5 - 7 Dias
+10088Electroforese de Proteina 28 875,00      5 - 7 Dias
+10089Epstei Baar-vírus IgG 33 000,00      48h
+10090Epten Baar-vírus IgM 33 000,00      48h
+10092Espemocultura 28 600,00      3 - 5 Dias
+10093Espermograma 20 625,00      24h
+10094Estradiol 27 500,00      48h
+10095Exame de Hidroxivitamina D 48 125,00      48h
+10096Exame Cito Bacteriologico do Suco Ganglionario 34 320,00      3 - 5 Dias
+10097Exame de papa Nicolau/citologia organica 49 500,00      15 Dias
+10098Exame Cervico Vaginal 49 500,00      15 Dias
+10099Exame de Secreção Vaginal Direito 13 750,00      24h
+10100Ferrantina 26 125,00      48h
+10102Ferro serico 20 625,00      24h
+10103Fezes Parasitológica 1* Amostra 5 775,00        24h
+10104Fezes Parasitológica 2* Amostra 5 775,00        24h
+10105Fezes Parasitológica 3* Amostra 5 775,00        24h
+10106Filariio Direto 6 875,00        24h
+10107Coombs Direto 21 312,50      24h
+10108Coombs Indireto 21 312,50      24h
+10109FOB (Pesquisa de sangue oculto) 17 325,00      24h
+10111Factor Rhumatoide 10 106,25      24h
+10112Fosforo na Urina de 24h 6 668,75        48h
+10113FSH 33 550,00      48h
+10114LH 30 250,00        48h
+10115Testosterona 34 500,00      48h
+10116Prolactina 27 885,00      48h
+10117Progesterona 28 050,00      48h
+10118TSH 27 293,75      48h
+10119T3 25 987,50      48h
+10120T4 26 812,50      48h
+10121T3 Livre 26 812,50      48h
+10122T4 Livre 26 812,50      48h
+10123Teste de Meares 138 875,00    15 Dias
+10124Glicemia Pos Prandial 5 568,75        24h
+10125Glucose 6 668,75        24h
+10126Gota espessa (GE/PP) 6 187,50        24h
+10127Grupo Sanguinea Sistema ABO e Facto Rhesus 6 888,75        24h
+10128HAV (Virus de hepatite A) IgM 27 706,25      48h
+10129HAV Total (Vírus de hepatite A) IgG 27 706,25      48h
+10130HBS Ag 13 062,50      24h
+10131HBs Ag Confirmatório 28 187,50      48h
+10132HCV 14 437,50      24h
+10133Helicobacter pylori nas Fezes 27 637,50      24h
+10134Helicobacter pylori 22 000,00      24h
+10135Hemoglobina Glicada (BbA1c) 28 187,50      24h
+10136Hemograma Completo 5 775,00        24h
+10137Herpes I IgG 33 000,00      48h
+10138Herpes I IgM 33 000,00      48h
+10139Herpes II IgG 33 000,00      48h
+10140Herpes II IgM 33 000,00      48h
+10142HIV 1,2 (Teste rápido) 18 562,50      24h
+10144 IgA (Imuno globulina A) 24 612,50      48h
+10145 IgG (Imunoglobulina G) 24 612,50      48h
+10146 IgE Total 30 951,25      48h
+10147 IgM (Imunoglobulina M) 24 612,50      48h
+10148 Ionograma Sanguinea (Na, K, Cl) 24 750,00      48h
+10149K (Potacio) 5 775,00        24h
+10150K (Potacio) na urina de 24h 5 775,00        24h
+10151Lamina de Sangue periférico 49 500,00      3 Dias
+10152LCR Exame Cito-Quimico 34 375,00      48h
+10153LDH (Lactato Deshydrogenase) 8 937,50        24h
+10154Exame Oncológico de LCR 49 500,00      15 Dias
+10155Exame Oncológico do Líquido Ascitico 49 500,00      15 Dias
+10156Exame Oncológico do Líqui pericardico 49 500,00      15 Dias
+10157Exame Oncológico do Líquido sinovial 49 500,00      15 Dias
+10158Lipase 41 250,00      24h
+10159Líquido Ascitico Exame Cito-Quimico 41 250,00      3-5 Dias
+10160Líquido Biliar exame Cito-Quimico 41 250,00      3-5 Dias
+10161Líquido Pericardico exame cito-quimico 41 250,00      3-5 Dias
+10162Líquido Pleural exame Cito quimico 41 250,00      3-5 Dias
+10163Líquido Sinovial exame Cito quimico 41 250,00      3-5 Dias
+10164Magnesio na Urina de 24h 17 325,00      48h
+10165Testosterona Livre 34 500,00      48h
+10166Mg (Magnesio) 13 750,00      48h
+10167Micro Albumina 11 687,50      24h
+10168Minelograma Completo 80 000,00      72h
+10169Na (Sodio) na urina de 24h 8 250,00        24h
+10170Na (Sodio) 8 250,00        24h
+10171B HCG 25 575,00      24h
+10172Calcio na urina de 24h 3 960,00        24h
+10174Na (Sodio) na urina de 24h 8 250,00        24h
+10175Numeração de Plaquetas 6 600,00        24h
+10176Peça churirgica 255 750,00    30 Dias 
+10178Pesquisa de anticorpos iregulares (RAI) 31 350,00      48h
+10179Pesquisa de droga de Abuso na urina 57 750,00      48h
+10180Pesquisa de Filaria no Sangue 6 187,50        24h
+10182Pesquisa de Mycobacterium leprea 33 825,00      5 dias 
+10183Pesquisa de Schistosama haematobium na urina 25 740,00      24h
+10184Pesquisa de Tripanosoma no sangue 25 575,00      24h
+10185pH na saliva 5 500,00        24h
+10186Ph Urinaria 4 125,00        24h
+10187Phosphoro (Fosforo) 22 275,00      24h
+10188Phostase Alcalina 8 250,00        24h
+10191Deslocação Técnico 33 000,00      24h
+10192Proteina 6 187,50        24h
+10193Proteina na urina de 24h 6 187,50        24h
+10194Psa Livre 40 000,00      48h
+10195Psa Total 40 000,00      48h
+10196PTGO (Prova de Tolerancia de Glucose oral) 25 000,00      24h
+10197PTH (Paratormono) 59 400,00      48h
+10198Recção Widal 6 187,00        24h
+10199Rubeola IgG 33 150,00      48h
+10200Rubeola IgM 33 150,00      48h
+10201TASO (ASO,ASLO) 6 200,00        24h
+10203Tempo de Protombina 9 075,00        24h
+10204TC (Tempo de Coagulação) 4 812,50        24h
+10205TH (Tempo de Hemoragia) 4 812,50        24h
+10206Teste de Falciformaçao 6 187,50        24h
+10207Teste de gravidez 5 775,00        24h
+10208Teste imunologico de BK 12 870,00      24h
+10209Toxoplasma IgG 28 000,00      48h
+10210Toxoplasma IgM 28 000,00      48h
+10211TPHA 23 100,00      48h
+10212Transferina 28 875,00      48h
+10213Triglicerido 7 562,50        24h
+10214Ureia 7 562,50        24h
+10215Ureia na urina de 24h 7 562,50        24h
+10216Urina tipo II 6 187,50        24h
+10217Urocultura /Urina Aseptica 23 100,00      3-5 Dias
+10218VDRL no LCR 7 425,00        24h
+10219VDRL (RPR) 7 425,00        24h
+10220VS (Velocidade de sedimentação 4 812,50        24h
+10221Prova da Curva de Ouro Coloidal no LCR 30 525,00      72h
+10233Factor Nati Nuclear (FAN/ANA) 140 250,00    5 dias 
+10234Teste De Urease 31 350,00      72h
+10249Troponina I 32 670,00      48h
+10250Troponina 32 670,00      48h
+10251Anticorpo Anti CCP 28 050,00      48h
+10252Teste de HIV1/2 Unigol 21 312,50      24h
+10253Pesquisa de BAAR na Urina 33 000,00      5 Dias
+10254Pesquisa de BAAR no LCR 33 000,00      5 Dias
+10255Pesquisa de BAAR no Líquido Ascitíco 33 000,00      5 Dias
+10256Pesquisa de BAAR no Liquido Pleural 33 000,00      5 Dias
+10257Pesquisa de BAAR no liquido pericardico 33 000,00      5 Dias
+10258Pesquisa de BAAR no Líquido sinovial 33 000,00      5 Dias
+10259AMH (Hormona Anti Mulheriano) 39 000,00      48h
+10300Anti RNP 95 000,00      5 Dias
+10301 Insulina 50 000,00      48h
+10302Ácido Fólico 16 000,00      24h
+10303Beta 2 Glicoproteina 1 IgG 45 000,00      48h
+10304Beta 2 Glicoproteina 1 IgM 45 000,00      48h
+10305TG (Tiroglobilina) 45 000,00      48h
+10306Anti-TG (Tiroglobilina) 35 000,00      48h
+10307Anti-Cardiolipina IgA (ACA) 30 000,00      48h
+10308Anti-Cardiolipina IgM (ACA) 30 000,00      48h
+10309Anti-Cardiolipina IgG (ACA) 30 000,00      48h
+10310Papiloma Virus IgG 45 000,00      5 Dias
+10311Papiloma Virus IgM 45 000,00      5 Dias
+10312ANA (Anti-Nuclear) 35 000,00      5 Dias
+10313Phosfatase Ácida 20 000,00      24h
+10314FTA ABS IgG (Teste Treponenica Quantitativa) 30 000,00      48h
+10315FTA ABS IgM (Teste Treponenica Quantitativa) 30 000,00      48h
+10316Hormonio de Crescimento Humano GnRH 30 000,00      48h
+10317Mioglobina 25 500,00      48h
+10318Peptiodio C 45 000,00      48h
+10319Virús de Varicela Zoster IgM 30 050,00      48h
+10320Virús de Varicela Zoster IgG 30 050,00      48h
+10321Ademograma 37 000,00      5 Dias
+10322Anti TPO( Anti- Tireoperoxidase 37 000,00      5 Dias
+10323Anticorpo Anti DNA 55 000,00      5 Dias
+10324 Anticorpo Anti PGL 1(Anticorpo Glicolípídeo Fenolino)
+10325 Anticorpo Anti Receptor do TSH (TRAB)
+10326 Pesquisa de Mycobacterium leprea( Bascilospia)
+10327 Pesquisa de Schistosama haematobium nas Fezes
+10328 Pesquisa de Celulas LE
+10329 Estudo Mycologico do Coro Cabeludo
+10330 ANCA
+10331 Mineralograma Simples
+10332 Fibranogénio
+39 000,00 
+45 000,00 
+31 500,00 
+17 600,00 
+45 000,00 
+45 000,00 
+45 000,00 
+45 000,00 
+9 036,00 
+5 Dias
+5 Dias
+7 Dias
+24h
+7 Dias
+7 Dias
+5 Dias
+72h
+24

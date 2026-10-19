@@ -1,0 +1,41 @@
+name: Importar módulo de facturação de produtos
+on:
+  push:
+    branches: [import/facturacao-produtos-artifacts-2]
+    paths:
+      - "imports/facturacao-produtos/artifacts-2.zip"
+      - "scripts/import_facturacao_produtos.py"
+      - ".github/workflows/import_facturacao_produtos.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Validar 287 ficheiros e gerar TREE integral
+        run: python3 scripts/import_facturacao_produtos.py
+      - name: Incluir também ficheiros ignorados sem alterar a sua estrutura
+        run: |
+          git add -f -- modules/gestao-facturacao-produtos/versao-artifacts-2/
+          python3 - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+          root=Path("modules/gestao-facturacao-produtos/versao-artifacts-2")
+          manifest=json.loads((root/"IMPORT_MANIFEST.json").read_text())
+          tracked=set(subprocess.check_output(["git","ls-files","-z","--",str(root)]).decode().split("\0"))
+          missing=[x["file"] for x in manifest["files"] if str(root/x["file"]) not in tracked]
+          if missing:
+              raise SystemExit("Missing original ZIP files in Git index: "+", ".join(missing))
+          assert len(manifest["files"])==287, "Unexpected original file count"
+          print("Verified all 287 original files in Git index plus complete TREE.md/TREE.txt")
+          PY
+      - name: Commit de ficheiros originais e da árvore (sem modificar main)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git diff --cached --quiet || (git commit -m "import: completar 287 ficheiros originais e TREE da versão artifacts-2" && git push origin HEAD:import/facturacao-produtos-artifacts-2)

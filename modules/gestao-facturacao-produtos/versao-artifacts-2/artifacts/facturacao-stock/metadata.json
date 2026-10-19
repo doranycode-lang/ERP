@@ -1,0 +1,6 @@
+{
+  "name": "Sistema de Facturação e Gestão de Stock",
+  "description": "Sistema completo de facturação certificada AGT e gestão de estoque de eletromedicina com suporte 100% offline, instalação como aplicação PWA/Desktop, lotes e validade, auditoria de movimentos e emissão local.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

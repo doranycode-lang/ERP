@@ -1,0 +1,26 @@
+import { useMemo, useState } from "react";
+import { Search, SlidersHorizontal } from "lucide-react";
+import { useListPacientes, useListResultados } from "@workspace/api-client-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { EmptyState, ExportButton, LoadingRows, PageShell, PrintButton, QueryError, StatusPill, downloadCsv, formatDate, openPrintWindow } from "./lab-ui";
+
+export default function LabHistorico() {
+  const resultados = useListResultados();
+  const pacientes = useListPacientes();
+  const [query, setQuery] = useState("");
+  const [estado, setEstado] = useState("");
+  const filtered = useMemo(() => {
+    const term = query.trim().toLowerCase();
+    return (resultados.data ?? []).filter(result => {
+      const name = (result.pacienteNome ?? pacientes.data?.find(p => p.id === result.pacienteId)?.nome ?? "").toLowerCase();
+      return (!term || name.includes(term) || String(result.id).includes(term) || (result.tecnicoNome ?? "").toLowerCase().includes(term)) && (!estado || result.estado === estado);
+    });
+  }, [resultados.data, pacientes.data, query, estado]);
+  const exportRows = () => downloadCsv("historico-laboratorial.csv", [["ID", "Paciente", "Data", "Emissão", "Técnico", "Estado", "Parâmetros"], ...filtered.map(result => [result.id, result.pacienteNome ?? `Paciente #${result.pacienteId}`, result.data, result.dataEmissao, result.tecnicoNome, result.estado, Array.isArray(result.parametros) ? result.parametros.length : 0])]);
+  const print = () => openPrintWindow("Histórico laboratorial — ULTRACARDIO", `<p>Registos encontrados: ${filtered.length}</p><table><thead><tr><th>ID</th><th>Paciente</th><th>Data</th><th>Emissão</th><th>Estado</th></tr></thead><tbody>${filtered.map(result => `<tr><td>#${result.id}</td><td>${result.pacienteNome ?? `Paciente #${result.pacienteId}`}</td><td>${formatDate(result.data)}</td><td>${formatDate(result.dataEmissao)}</td><td>${result.estado ?? "—"}</td></tr>`).join("")}</tbody></table>`);
+  return <PageShell title="Histórico de resultados" description="Consulte a trilha laboratorial completa, filtre por estado e exporte a leitura atual para revisão ou arquivo." actions={<><ExportButton onClick={exportRows} /><PrintButton onClick={print} /></>}>
+    <div className="flex flex-col gap-3 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-3 shadow-sm sm:flex-row"><div className="relative flex-1"><Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-[hsl(var(--muted-foreground))]" /><Input className="pl-9" placeholder="Paciente, técnico ou ID..." value={query} onChange={event => setQuery(event.target.value)} data-testid="input-search-historico" /></div><div className="flex items-center gap-2"><SlidersHorizontal size={15} className="text-[hsl(var(--muted-foreground))]" /><select className="h-9 rounded-md border border-input bg-background px-3 text-sm" value={estado} onChange={event => setEstado(event.target.value)} data-testid="select-filter-estado"><option value="">Todos os estados</option><option value="rascunho">Rascunho</option><option value="emitido">Emitido</option></select><Button variant="ghost" size="sm" onClick={() => { setQuery(""); setEstado(""); }} data-testid="button-clear-filters">Limpar</Button></div></div>
+    <div className="overflow-hidden rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] shadow-sm">{resultados.isError || pacientes.isError ? <QueryError onRetry={() => { void resultados.refetch(); void pacientes.refetch(); }} /> : resultados.isLoading || pacientes.isLoading ? <LoadingRows columns={5} /> : filtered.length === 0 ? <EmptyState title="Nenhum resultado corresponde aos filtros" description="Ajuste a pesquisa ou aguarde novos resultados da equipa." /> : <div className="overflow-x-auto"><table className="w-full min-w-[760px] text-sm"><thead className="bg-[hsl(var(--muted))] text-left text-[10px] uppercase tracking-wider text-[hsl(var(--muted-foreground))]"><tr><th className="px-4 py-3">Resultado</th><th className="px-4 py-3">Paciente</th><th className="px-4 py-3">Colheita</th><th className="px-4 py-3">Emissão</th><th className="px-4 py-3">Técnico</th><th className="px-4 py-3 text-right">Estado</th></tr></thead><tbody>{filtered.map(result => <tr key={result.id} className="border-t border-[hsl(var(--border))] transition-colors hover:bg-[hsl(var(--accent))]" data-testid={`row-historico-${result.id}`}><td className="px-4 py-3 font-mono text-xs font-bold text-[hsl(var(--primary))]">#{String(result.id).padStart(4, "0")}</td><td className="px-4 py-3 font-medium">{result.pacienteNome ?? pacientes.data?.find(p => p.id === result.pacienteId)?.nome ?? `Paciente #${result.pacienteId}`}</td><td className="px-4 py-3 text-[hsl(var(--muted-foreground))]">{formatDate(result.data)}</td><td className="px-4 py-3 text-[hsl(var(--muted-foreground))]">{formatDate(result.dataEmissao)}</td><td className="px-4 py-3">{result.tecnicoNome ?? "—"}</td><td className="px-4 py-3 text-right"><StatusPill status={result.estado} /></td></tr>)}</tbody></table></div>}</div>
+  </PageShell>;
+}

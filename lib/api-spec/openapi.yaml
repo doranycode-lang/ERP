@@ -1,0 +1,2116 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: ERP API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: settings
+    description: Company settings
+  - name: products
+    description: Product catalog and stock
+  - name: clients
+    description: Client management
+  - name: documents
+    description: Sales documents (invoices, etc.)
+  - name: dashboard
+    description: Dashboard summaries
+  - name: pacientes
+    description: Lab patient management
+  - name: resultados
+    description: Lab results
+  - name: exames-custom
+    description: Custom exam catalog
+  - name: reagentes
+    description: Lab reagent stock management
+
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /settings:
+    get:
+      operationId: getSettings
+      tags: [settings]
+      summary: Get company settings
+      responses:
+        "200":
+          description: Company settings
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Settings"
+    patch:
+      operationId: updateSettings
+      tags: [settings]
+      summary: Update company settings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SettingsUpdate"
+      responses:
+        "200":
+          description: Updated settings
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Settings"
+
+  /products:
+    get:
+      operationId: listProducts
+      tags: [products]
+      summary: List all products
+      parameters:
+        - name: search
+          in: query
+          schema:
+            type: string
+        - name: category
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+    post:
+      operationId: createProduct
+      tags: [products]
+      summary: Create a product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProductInput"
+      responses:
+        "201":
+          description: Created product
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+
+  /products/{id}:
+    get:
+      operationId: getProduct
+      tags: [products]
+      summary: Get a product
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Product
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        "404":
+          description: Not found
+    patch:
+      operationId: updateProduct
+      tags: [products]
+      summary: Update a product
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProductUpdate"
+      responses:
+        "200":
+          description: Updated product
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        "404":
+          description: Not found
+    delete:
+      operationId: deleteProduct
+      tags: [products]
+      summary: Delete a product
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+        "404":
+          description: Not found
+
+  /clients:
+    get:
+      operationId: listClients
+      tags: [clients]
+      summary: List all clients
+      parameters:
+        - name: search
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of clients
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Client"
+    post:
+      operationId: createClient
+      tags: [clients]
+      summary: Create a client
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClientInput"
+      responses:
+        "201":
+          description: Created client
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Client"
+
+  /clients/{id}:
+    get:
+      operationId: getClient
+      tags: [clients]
+      summary: Get a client
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Client
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Client"
+        "404":
+          description: Not found
+    patch:
+      operationId: updateClient
+      tags: [clients]
+      summary: Update a client
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClientUpdate"
+      responses:
+        "200":
+          description: Updated client
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Client"
+        "404":
+          description: Not found
+    delete:
+      operationId: deleteClient
+      tags: [clients]
+      summary: Delete a client
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+        "404":
+          description: Not found
+
+  /documents:
+    get:
+      operationId: listDocuments
+      tags: [documents]
+      summary: List all documents
+      parameters:
+        - name: type
+          in: query
+          schema:
+            type: string
+        - name: clientId
+          in: query
+          schema:
+            type: integer
+        - name: status
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of documents
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Document"
+    post:
+      operationId: createDocument
+      tags: [documents]
+      summary: Create a document
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DocumentInput"
+      responses:
+        "201":
+          description: Created document
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Document"
+
+  /documents/{id}:
+    get:
+      operationId: getDocument
+      tags: [documents]
+      summary: Get a document with its items
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Document with items
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DocumentDetail"
+        "404":
+          description: Not found
+    patch:
+      operationId: updateDocument
+      tags: [documents]
+      summary: Update a document
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DocumentUpdate"
+      responses:
+        "200":
+          description: Updated document
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Document"
+        "404":
+          description: Not found
+        "409":
+          description: Emitted documents cannot be changed except for payment or cancellation
+    delete:
+      operationId: deleteDocument
+      tags: [documents]
+      summary: Delete a document
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+        "404":
+          description: Not found
+        "409":
+          description: Only draft documents can be deleted
+
+  /documents/{id}/items:
+    post:
+      operationId: addDocumentItem
+      tags: [documents]
+      summary: Add an item to a document
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DocumentItemInput"
+      responses:
+        "201":
+          description: Added item
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DocumentItem"
+        "404":
+          description: Document not found
+        "409":
+          description: Items can only be added to draft documents
+
+  /documents/{id}/items/{itemId}:
+    patch:
+      operationId: updateDocumentItem
+      tags: [documents]
+      summary: Update a document item
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: itemId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DocumentItemUpdate"
+      responses:
+        "200":
+          description: Updated item
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DocumentItem"
+        "404":
+          description: Not found
+        "409":
+          description: Items on emitted documents cannot be modified
+    delete:
+      operationId: deleteDocumentItem
+      tags: [documents]
+      summary: Remove an item from a document
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+        - name: itemId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+        "404":
+          description: Document or item not found
+        "409":
+          description: Items on emitted documents cannot be deleted
+
+  /dashboard:
+    get:
+      operationId: getDashboard
+      tags: [dashboard]
+      summary: Get dashboard summary stats
+      responses:
+        "200":
+          description: Dashboard data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Dashboard"
+
+  /pacientes:
+    get:
+      operationId: listPacientes
+      tags: [pacientes]
+      summary: List all patients
+      parameters:
+        - name: search
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of patients
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Paciente"
+    post:
+      operationId: createPaciente
+      tags: [pacientes]
+      summary: Create a patient
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PacienteInput"
+      responses:
+        "201":
+          description: Created patient
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Paciente"
+
+  /pacientes/{id}:
+    get:
+      operationId: getPaciente
+      tags: [pacientes]
+      summary: Get a patient
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Patient
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Paciente"
+        "404":
+          description: Not found
+    patch:
+      operationId: updatePaciente
+      tags: [pacientes]
+      summary: Update a patient
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PacienteUpdate"
+      responses:
+        "200":
+          description: Updated patient
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Paciente"
+        "404":
+          description: Not found
+    delete:
+      operationId: deletePaciente
+      tags: [pacientes]
+      summary: Delete a patient
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+
+  /resultados:
+    get:
+      operationId: listResultados
+      tags: [resultados]
+      summary: List all results
+      parameters:
+        - name: pacienteId
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: List of results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Resultado"
+    post:
+      operationId: createResultado
+      tags: [resultados]
+      summary: Create a result
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ResultadoInput"
+      responses:
+        "201":
+          description: Created result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Resultado"
+
+  /resultados/{id}:
+    get:
+      operationId: getResultado
+      tags: [resultados]
+      summary: Get a result
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Resultado"
+        "404":
+          description: Not found
+    patch:
+      operationId: updateResultado
+      tags: [resultados]
+      summary: Update a result
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ResultadoUpdate"
+      responses:
+        "200":
+          description: Updated result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Resultado"
+        "404":
+          description: Not found
+    delete:
+      operationId: deleteResultado
+      tags: [resultados]
+      summary: Delete a result
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+
+  /exames-custom:
+    get:
+      operationId: listExamesCustom
+      tags: [exames-custom]
+      summary: List custom exams
+      responses:
+        "200":
+          description: List of custom exams
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ExameCustom"
+    post:
+      operationId: createExameCustom
+      tags: [exames-custom]
+      summary: Create a custom exam
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ExameCustomInput"
+      responses:
+        "201":
+          description: Created custom exam
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExameCustom"
+
+  /exames-custom/{id}:
+    get:
+      operationId: getExameCustom
+      tags: [exames-custom]
+      summary: Get a custom exam
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Custom exam
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExameCustom"
+        "404":
+          description: Not found
+    patch:
+      operationId: updateExameCustom
+      tags: [exames-custom]
+      summary: Update a custom exam
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ExameCustomUpdate"
+      responses:
+        "200":
+          description: Updated custom exam
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExameCustom"
+        "404":
+          description: Not found
+    delete:
+      operationId: deleteExameCustom
+      tags: [exames-custom]
+      summary: Delete a custom exam
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+
+  /reagentes:
+    get:
+      operationId: listReagentes
+      tags: [reagentes]
+      summary: List reagents
+      responses:
+        "200":
+          description: List of reagents
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Reagente"
+    post:
+      operationId: createReagente
+      tags: [reagentes]
+      summary: Create a reagent
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReagenteInput"
+      responses:
+        "201":
+          description: Created reagent
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Reagente"
+
+  /reagentes/{id}:
+    get:
+      operationId: getReagente
+      tags: [reagentes]
+      summary: Get a reagent
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Reagent
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Reagente"
+        "404":
+          description: Not found
+    patch:
+      operationId: updateReagente
+      tags: [reagentes]
+      summary: Update a reagent
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReagenteUpdate"
+      responses:
+        "200":
+          description: Updated reagent
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Reagente"
+        "404":
+          description: Not found
+    delete:
+      operationId: deleteReagente
+      tags: [reagentes]
+      summary: Delete a reagent
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+
+  /funcionarios:
+    get:
+      operationId: listFuncionarios
+      tags: [funcionarios]
+      summary: List laboratory staff
+      responses:
+        "200":
+          description: List of laboratory staff
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Funcionario"
+    post:
+      operationId: createFuncionario
+      tags: [funcionarios]
+      summary: Create laboratory staff member
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FuncionarioInput"
+      responses:
+        "201":
+          description: Created staff member
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Funcionario"
+
+  /funcionarios/{id}:
+    get:
+      operationId: getFuncionario
+      tags: [funcionarios]
+      summary: Get laboratory staff member
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Staff member
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Funcionario"
+        "404":
+          description: Not found
+    patch:
+      operationId: updateFuncionario
+      tags: [funcionarios]
+      summary: Update laboratory staff member
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FuncionarioUpdate"
+      responses:
+        "200":
+          description: Updated staff member
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Funcionario"
+        "404":
+          description: Not found
+    delete:
+      operationId: deleteFuncionario
+      tags: [funcionarios]
+      summary: Delete laboratory staff member
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+
+  /parceiros:
+    get:
+      operationId: listParceiros
+      tags: [parceiros]
+      summary: List laboratory partners
+      responses:
+        "200":
+          description: List of laboratory partners
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Parceiro"
+    post:
+      operationId: createParceiro
+      tags: [parceiros]
+      summary: Create laboratory partner
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ParceiroInput"
+      responses:
+        "201":
+          description: Created partner
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Parceiro"
+
+  /parceiros/{id}:
+    get:
+      operationId: getParceiro
+      tags: [parceiros]
+      summary: Get laboratory partner
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Partner
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Parceiro"
+        "404":
+          description: Not found
+    patch:
+      operationId: updateParceiro
+      tags: [parceiros]
+      summary: Update laboratory partner
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ParceiroUpdate"
+      responses:
+        "200":
+          description: Updated partner
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Parceiro"
+        "404":
+          description: Not found
+    delete:
+      operationId: deleteParceiro
+      tags: [parceiros]
+      summary: Delete laboratory partner
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Deleted
+
+  /solicitacoes:
+    get:
+      operationId: listSolicitacoes
+      tags: [solicitacoes]
+      summary: List partner exam requests
+      responses:
+        "200":
+          description: List of partner exam requests
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Solicitacao"
+    post:
+      operationId: createSolicitacao
+      tags: [solicitacoes]
+      summary: Create a partner exam request
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SolicitacaoInput"
+      responses:
+        "201":
+          description: Created request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Solicitacao"
+
+  /solicitacoes/{id}:
+    get:
+      operationId: getSolicitacao
+      tags: [solicitacoes]
+      summary: Get a partner exam request
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Exam request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Solicitacao"
+        "404":
+          description: Not found
+    patch:
+      operationId: updateSolicitacao
+      tags: [solicitacoes]
+      summary: Update a partner exam request
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SolicitacaoUpdate"
+      responses:
+        "200":
+          description: Updated request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Solicitacao"
+        "404":
+          description: Not found
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+
+    Settings:
+      type: object
+      required: [id, companyName, nif, currency, country]
+      properties:
+        id:
+          type: integer
+        companyName:
+          type: string
+        nif:
+          type: string
+        currency:
+          type: string
+        country:
+          type: string
+        email:
+          type: ["string", "null"]
+        phone:
+          type: ["string", "null"]
+        address:
+          type: ["string", "null"]
+        logoUrl:
+          type: ["string", "null"]
+        taxRate:
+          type: number
+        updatedAt:
+          type: string
+
+    SettingsUpdate:
+      type: object
+      properties:
+        companyName:
+          type: string
+        nif:
+          type: string
+        currency:
+          type: string
+        country:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        address:
+          type: string
+        logoUrl:
+          type: string
+        taxRate:
+          type: number
+
+    Product:
+      type: object
+      required: [id, name, price, stock, unit, createdAt]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        sku:
+          type: ["string", "null"]
+        description:
+          type: ["string", "null"]
+        category:
+          type: ["string", "null"]
+        price:
+          type: number
+        costPrice:
+          type: ["number", "null"]
+        stock:
+          type: number
+        unit:
+          type: string
+        taxRate:
+          type: ["number", "null"]
+        active:
+          type: boolean
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    ProductInput:
+      type: object
+      required: [name, price, stock, unit]
+      properties:
+        name:
+          type: string
+          minLength: 1
+        sku:
+          type: string
+        description:
+          type: string
+        category:
+          type: string
+        price:
+          type: number
+          minimum: 0
+        costPrice:
+          type: number
+        stock:
+          type: number
+        unit:
+          type: string
+        taxRate:
+          type: number
+        active:
+          type: boolean
+
+    ProductUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+        sku:
+          type: string
+        description:
+          type: string
+        category:
+          type: string
+        price:
+          type: number
+          minimum: 0
+        costPrice:
+          type: number
+        stock:
+          type: number
+        unit:
+          type: string
+        taxRate:
+          type: number
+        active:
+          type: boolean
+
+    Client:
+      type: object
+      required: [id, name, createdAt]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        nif:
+          type: ["string", "null"]
+        email:
+          type: ["string", "null"]
+        phone:
+          type: ["string", "null"]
+        address:
+          type: ["string", "null"]
+        city:
+          type: ["string", "null"]
+        country:
+          type: ["string", "null"]
+        notes:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    ClientInput:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+          minLength: 1
+        nif:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        address:
+          type: string
+        city:
+          type: string
+        country:
+          type: string
+        notes:
+          type: string
+
+    ClientUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+        nif:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        address:
+          type: string
+        city:
+          type: string
+        country:
+          type: string
+        notes:
+          type: string
+
+    Document:
+      type: object
+      required: [id, type, status, total, createdAt]
+      properties:
+        id:
+          type: integer
+        number:
+          type: ["string", "null"]
+        type:
+          type: string
+          enum: [factura, factura_global, factura_recibo, nota_credito, factura_proforma, orcamento, encomenda, guia_transporte, guia_remessa, avenca, recibo]
+        status:
+          type: string
+          enum: [rascunho, emitido, pago, cancelado]
+        clientId:
+          type: ["integer", "null"]
+        clientName:
+          type: ["string", "null"]
+        subtotal:
+          type: number
+        tax:
+          type: number
+        discount:
+          type: number
+        total:
+          type: number
+        notes:
+          type: ["string", "null"]
+        dueDate:
+          type: ["string", "null"]
+        issuedAt:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    DocumentInput:
+      type: object
+      required: [type]
+      properties:
+        type:
+          type: string
+          enum: [factura, factura_global, factura_recibo, nota_credito, factura_proforma, orcamento, encomenda, guia_transporte, guia_remessa, avenca, recibo]
+        clientId:
+          type: integer
+        notes:
+          type: string
+        dueDate:
+          type: string
+        discount:
+          type: number
+
+    DocumentUpdate:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [factura, factura_global, factura_recibo, nota_credito, factura_proforma, orcamento, encomenda, guia_transporte, guia_remessa, avenca, recibo]
+        status:
+          type: string
+          enum: [rascunho, emitido, pago, cancelado]
+        clientId:
+          type: integer
+        notes:
+          type: string
+        dueDate:
+          type: string
+        discount:
+          type: number
+
+    DocumentItem:
+      type: object
+      required: [id, documentId, description, quantity, unitPrice, total]
+      properties:
+        id:
+          type: integer
+        documentId:
+          type: integer
+        productId:
+          type: ["integer", "null"]
+        description:
+          type: string
+        quantity:
+          type: number
+        unitPrice:
+          type: number
+        discount:
+          type: number
+        taxRate:
+          type: number
+        total:
+          type: number
+
+    DocumentItemInput:
+      type: object
+      required: [description, quantity, unitPrice]
+      properties:
+        productId:
+          type: integer
+        description:
+          type: string
+          minLength: 1
+        quantity:
+          type: number
+          minimum: 0
+        unitPrice:
+          type: number
+          minimum: 0
+        discount:
+          type: number
+        taxRate:
+          type: number
+
+    DocumentItemUpdate:
+      type: object
+      properties:
+        description:
+          type: string
+          minLength: 1
+        quantity:
+          type: number
+          minimum: 0
+        unitPrice:
+          type: number
+          minimum: 0
+        discount:
+          type: number
+        taxRate:
+          type: number
+
+    DocumentDetail:
+      type: object
+      required: [id, type, status, total, createdAt, items]
+      properties:
+        id:
+          type: integer
+        number:
+          type: ["string", "null"]
+        type:
+          type: string
+          enum: [factura, factura_global, factura_recibo, nota_credito, factura_proforma, orcamento, encomenda, guia_transporte, guia_remessa, avenca, recibo]
+        status:
+          type: string
+          enum: [rascunho, emitido, pago, cancelado]
+        clientId:
+          type: ["integer", "null"]
+        clientName:
+          type: ["string", "null"]
+        subtotal:
+          type: number
+        tax:
+          type: number
+        discount:
+          type: number
+        total:
+          type: number
+        notes:
+          type: ["string", "null"]
+        dueDate:
+          type: ["string", "null"]
+        issuedAt:
+          type: ["string", "null"]
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/DocumentItem"
+
+    Dashboard:
+      type: object
+      required: [totalRevenue, totalClients, totalProducts, totalDocuments, recentDocuments, monthlySales]
+      properties:
+        totalRevenue:
+          type: number
+        totalClients:
+          type: integer
+        totalProducts:
+          type: integer
+        totalDocuments:
+          type: integer
+        pendingAmount:
+          type: number
+        recentDocuments:
+          type: array
+          items:
+            $ref: "#/components/schemas/Document"
+        monthlySales:
+          type: array
+          items:
+            $ref: "#/components/schemas/MonthlySale"
+        topProducts:
+          type: array
+          items:
+            $ref: "#/components/schemas/TopProduct"
+
+    MonthlySale:
+      type: object
+      required: [month, total]
+      properties:
+        month:
+          type: string
+        total:
+          type: number
+        count:
+          type: integer
+
+    TopProduct:
+      type: object
+      required: [productId, name, totalSold, revenue]
+      properties:
+        productId:
+          type: integer
+        name:
+          type: string
+        totalSold:
+          type: number
+        revenue:
+          type: number
+
+    Paciente:
+      type: object
+      required: [id, nome, createdAt]
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        nasc:
+          type: string
+        sexo:
+          type: string
+        bi:
+          type: string
+        nif:
+          type: string
+        nacionalidade:
+          type: string
+        estadoCivil:
+          type: string
+        profissao:
+          type: string
+        telefone:
+          type: string
+        telefone2:
+          type: string
+        email:
+          type: string
+        endereco:
+          type: string
+        grupoSanguineo:
+          type: string
+        fatorRh:
+          type: string
+        alergias:
+          type: string
+        patologiasCronicas:
+          type: string
+        medicacaoHabitual:
+          type: string
+        contactoEmergenciaNome:
+          type: string
+        contactoEmergenciaTel:
+          type: string
+        empresa:
+          type: string
+        processo:
+          type: string
+        medico:
+          type: string
+        nAmostra:
+          type: string
+        recolha:
+          type: string
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    PacienteInput:
+      type: object
+      required: [nome]
+      properties:
+        nome:
+          type: string
+          minLength: 1
+        nasc:
+          type: string
+        sexo:
+          type: string
+        bi:
+          type: string
+        nif:
+          type: string
+        nacionalidade:
+          type: string
+        estadoCivil:
+          type: string
+        profissao:
+          type: string
+        telefone:
+          type: string
+        telefone2:
+          type: string
+        email:
+          type: string
+        endereco:
+          type: string
+        grupoSanguineo:
+          type: string
+        fatorRh:
+          type: string
+        alergias:
+          type: string
+        patologiasCronicas:
+          type: string
+        medicacaoHabitual:
+          type: string
+        contactoEmergenciaNome:
+          type: string
+        contactoEmergenciaTel:
+          type: string
+        empresa:
+          type: string
+        processo:
+          type: string
+        medico:
+          type: string
+        nAmostra:
+          type: string
+        recolha:
+          type: string
+
+    PacienteUpdate:
+      type: object
+      properties:
+        nome:
+          type: string
+          minLength: 1
+        nasc:
+          type: string
+        sexo:
+          type: string
+        bi:
+          type: string
+        nif:
+          type: string
+        nacionalidade:
+          type: string
+        estadoCivil:
+          type: string
+        profissao:
+          type: string
+        telefone:
+          type: string
+        telefone2:
+          type: string
+        email:
+          type: string
+        endereco:
+          type: string
+        grupoSanguineo:
+          type: string
+        fatorRh:
+          type: string
+        alergias:
+          type: string
+        patologiasCronicas:
+          type: string
+        medicacaoHabitual:
+          type: string
+        contactoEmergenciaNome:
+          type: string
+        contactoEmergenciaTel:
+          type: string
+        empresa:
+          type: string
+        processo:
+          type: string
+        medico:
+          type: string
+        nAmostra:
+          type: string
+        recolha:
+          type: string
+
+    Resultado:
+      type: object
+      required: [id, pacienteId, createdAt]
+      properties:
+        id:
+          type: integer
+        pacienteId:
+          type: integer
+        pacienteNome:
+          type: string
+        data:
+          type: string
+        dataEmissao:
+          type: string
+        parametros:
+          type: array
+          items: {}
+        tecnicoNome:
+          type: string
+        observacoes:
+          type: string
+        estado:
+          type: string
+          enum: [rascunho, emitido]
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    ResultadoInput:
+      type: object
+      required: [pacienteId]
+      properties:
+        pacienteId:
+          type: integer
+        pacienteNome:
+          type: string
+        data:
+          type: string
+        dataEmissao:
+          type: string
+        parametros:
+          type: array
+          items: {}
+        tecnicoNome:
+          type: string
+        observacoes:
+          type: string
+        estado:
+          type: string
+          enum: [rascunho, emitido]
+
+    ResultadoUpdate:
+      type: object
+      properties:
+        pacienteNome:
+          type: string
+        data:
+          type: string
+        dataEmissao:
+          type: string
+        parametros:
+          type: array
+          items: {}
+        tecnicoNome:
+          type: string
+        observacoes:
+          type: string
+        estado:
+          type: string
+          enum: [rascunho, emitido]
+
+    ExameCustom:
+      type: object
+      required: [id, categoria, nome, createdAt]
+      properties:
+        id:
+          type: integer
+        categoria:
+          type: string
+        nome:
+          type: string
+        parametros:
+          type: array
+          items: {}
+        ativo:
+          type: boolean
+        createdAt:
+          type: string
+
+    ExameCustomInput:
+      type: object
+      required: [categoria, nome]
+      properties:
+        categoria:
+          type: string
+          minLength: 1
+        nome:
+          type: string
+          minLength: 1
+        parametros:
+          type: array
+          items: {}
+        ativo:
+          type: boolean
+
+    ExameCustomUpdate:
+      type: object
+      properties:
+        categoria:
+          type: string
+          minLength: 1
+        nome:
+          type: string
+          minLength: 1
+        parametros:
+          type: array
+          items: {}
+        ativo:
+          type: boolean
+
+    Funcionario:
+      type: object
+      required: [id, nome, cargo, email, telefone, ativo, createdAt, updatedAt]
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        cargo:
+          type: string
+        email:
+          type: string
+        telefone:
+          type: string
+        ativo:
+          type: boolean
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    FuncionarioInput:
+      type: object
+      required: [nome]
+      properties:
+        nome:
+          type: string
+          minLength: 1
+        cargo:
+          type: string
+        email:
+          type: string
+        telefone:
+          type: string
+        ativo:
+          type: boolean
+
+    FuncionarioUpdate:
+      type: object
+      properties:
+        nome:
+          type: string
+          minLength: 1
+        cargo:
+          type: string
+        email:
+          type: string
+        telefone:
+          type: string
+        ativo:
+          type: boolean
+
+    Parceiro:
+      type: object
+      required: [id, nome, instituicao, nif, email, telefone, ativo, createdAt, updatedAt]
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        instituicao:
+          type: string
+        nif:
+          type: string
+        email:
+          type: string
+        telefone:
+          type: string
+        ativo:
+          type: boolean
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    ParceiroInput:
+      type: object
+      required: [nome]
+      properties:
+        nome:
+          type: string
+          minLength: 1
+        instituicao:
+          type: string
+        nif:
+          type: string
+        email:
+          type: string
+        telefone:
+          type: string
+        ativo:
+          type: boolean
+
+    ParceiroUpdate:
+      type: object
+      properties:
+        nome:
+          type: string
+          minLength: 1
+        instituicao:
+          type: string
+        nif:
+          type: string
+        email:
+          type: string
+        telefone:
+          type: string
+        ativo:
+          type: boolean
+
+    Solicitacao:
+      type: object
+      required: [id, parceiroNome, pacienteId, pacienteNome, exames, urgente, estado, observacoes, createdAt, updatedAt]
+      properties:
+        id:
+          type: integer
+        parceiroId:
+          type: ["integer", "null"]
+        parceiroNome:
+          type: string
+        pacienteId:
+          type: integer
+        pacienteNome:
+          type: string
+        exames:
+          type: array
+          items: {}
+        urgente:
+          type: boolean
+        estado:
+          type: string
+          enum: [pendente, recebido, em_analise, concluida, cancelada]
+        observacoes:
+          type: string
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    SolicitacaoInput:
+      type: object
+      required: [pacienteId, pacienteNome, exames]
+      properties:
+        parceiroId:
+          type: integer
+        parceiroNome:
+          type: string
+        pacienteId:
+          type: integer
+        pacienteNome:
+          type: string
+        exames:
+          type: array
+          items: {}
+        urgente:
+          type: boolean
+        estado:
+          type: string
+          enum: [pendente, recebido, em_analise, concluida, cancelada]
+        observacoes:
+          type: string
+
+    SolicitacaoUpdate:
+      type: object
+      properties:
+        parceiroId:
+          type: integer
+        parceiroNome:
+          type: string
+        pacienteId:
+          type: integer
+        pacienteNome:
+          type: string
+        exames:
+          type: array
+          items: {}
+        urgente:
+          type: boolean
+        estado:
+          type: string
+          enum: [pendente, recebido, em_analise, concluida, cancelada]
+        observacoes:
+          type: string
+
+    Reagente:
+      type: object
+      required: [id, nome, createdAt]
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        exameCodigo:
+          type: string
+        exameNome:
+          type: string
+        fornecedor:
+          type: string
+        unidade:
+          type: string
+        stockAtual:
+          type: integer
+        stockMinimo:
+          type: integer
+        precoUnitario:
+          type: number
+        lote:
+          type: string
+        dataValidade:
+          type: string
+        observacoes:
+          type: string
+        ativo:
+          type: boolean
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    ReagenteInput:
+      type: object
+      required: [nome]
+      properties:
+        nome:
+          type: string
+          minLength: 1
+        exameCodigo:
+          type: string
+        exameNome:
+          type: string
+        fornecedor:
+          type: string
+        unidade:
+          type: string
+        stockAtual:
+          type: integer
+        stockMinimo:
+          type: integer
+        precoUnitario:
+          type: number
+        lote:
+          type: string
+        dataValidade:
+          type: string
+        observacoes:
+          type: string
+        ativo:
+          type: boolean
+
+    ReagenteUpdate:
+      type: object
+      properties:
+        nome:
+          type: string
+          minLength: 1
+        exameCodigo:
+          type: string
+        exameNome:
+          type: string
+        fornecedor:
+          type: string
+        unidade:
+          type: string
+        stockAtual:
+          type: integer
+        stockMinimo:
+          type: integer
+        precoUnitario:
+          type: number
+        lote:
+          type: string
+        dataValidade:
+          type: string
+        observacoes:
+          type: string
+        ativo:
+          type: boolean

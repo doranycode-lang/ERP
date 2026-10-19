@@ -1,0 +1,16 @@
+{
+  "name": "@ultracardio/hospital-operacional",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "node --watch src/server.mjs",
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check src/server.mjs && node --check src/http.mjs && node --check src/domain.mjs && node --check src/auth.mjs && node --check src/db.mjs"
+  }
+}

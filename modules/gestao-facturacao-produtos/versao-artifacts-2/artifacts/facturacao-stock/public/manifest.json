@@ -1,0 +1,49 @@
+{
+  "name": "Facturação & Gestão de Estoque Eletromedicina",
+  "short_name": "Facturação AGT",
+  "description": "Sistema completo de facturação certificada AGT, gestão de estoque de eletromedicina e kits de procedimentos com funcionamento 100% offline.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0284c7",
+  "orientation": "any",
+  "categories": ["business", "finance", "medical", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nova Factura",
+      "short_name": "Facturar",
+      "description": "Emitir nova factura ou venda a dinheiro",
+      "url": "/?tab=faturacao",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Consultar Estoque",
+      "short_name": "Estoque",
+      "description": "Consultar produtos e lotes",
+      "url": "/?tab=estoque",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Leitor Barcode",
+      "short_name": "Scanner",
+      "description": "Abrir leitor de código de barras",
+      "url": "/?action=scanner",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

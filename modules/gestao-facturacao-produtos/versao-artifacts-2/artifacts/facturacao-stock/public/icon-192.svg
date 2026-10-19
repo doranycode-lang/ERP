@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="42" fill="url(#bgGrad)" />
+  <rect x="28" y="32" width="136" height="128" rx="18" fill="#ffffff" fill-opacity="0.1" stroke="#38bdf8" stroke-width="3" stroke-opacity="0.4"/>
+  
+  <!-- Receipt & Pulse Wave Graphic -->
+  <path d="M52 56 H140 M52 74 H116" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
+  
+  <!-- Medical / Eletromedicina EKG Pulse -->
+  <path d="M48 116 L72 116 L82 92 L96 140 L108 104 L118 116 L144 116" fill="none" stroke="url(#iconGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Certified Badge Dot -->
+  <circle cx="140" cy="56" r="6" fill="#10b981" />
+</svg>

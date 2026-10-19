@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Sistema Laboratorial"
+version = "1.0.0"
+id = "artifacts/lab-results"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24567
+
+[services.development]
+run = "pnpm --filter @workspace/lab-results run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/lab-results", "run", "build" ]
+publicDir = "artifacts/lab-results/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24567"
+BASE_PATH = "/"
