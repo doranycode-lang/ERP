@@ -1,7 +1,7 @@
 name: Hospital Operacional - testes reais de API e persistência
 on:
   push:
-    branches: [feat/hospital-web-operacional]
+    branches: [main, feat/hospital-web-operacional]
     paths:
       - "apps/hospital-operacional/**"
       - ".github/workflows/hospital-operacional.yml"
@@ -36,6 +36,25 @@ jobs:
           test -f public/index.html
           test -f public/app.js
           test -f Dockerfile
+      - name: Verify every imported billing file against its original SHA-256
+        working-directory: .
+        run: |
+          python3 - <<'PY'
+          import json
+          import hashlib
+          from pathlib import Path
+          root=Path("modules/gestao-facturacao-produtos/versao-artifacts-2")
+          manifest=json.loads((root/"IMPORT_MANIFEST.json").read_text(encoding="utf-8"))
+          entries=manifest["files"]
+          assert len(entries)==287, f"Expected 287 originals, got {len(entries)}"
+          for info in entries:
+              path=root/info["file"]
+              assert path.is_file(), f"Missing original: {info['file']}"
+              content=path.read_bytes()
+              assert len(content)==info["bytes"], f"Size differs: {info['file']}"
+              assert hashlib.sha256(content).hexdigest()==info["sha256"], f"Hash differs: {info['file']}"
+          print(f"All {len(entries)} original billing files match the import manifest.")
+          PY
       - name: Pack original ERP import and executable hospital web
         working-directory: .
         run: |
