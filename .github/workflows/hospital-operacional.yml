@@ -1,0 +1,51 @@
+name: Hospital Operacional - testes reais de API e persistência
+on:
+  push:
+    branches: [feat/hospital-web-operacional]
+    paths:
+      - "apps/hospital-operacional/**"
+      - ".github/workflows/hospital-operacional.yml"
+  pull_request:
+    paths:
+      - "apps/hospital-operacional/**"
+      - ".github/workflows/hospital-operacional.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/hospital-operacional
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+      - name: Validate backend and browser JavaScript
+        run: |
+          npm run check
+          node --check public/app.js
+      - name: Run authenticated HTTP and persistence integration tests
+        run: npm test
+      - name: Check source preservation and absence of production credentials
+        run: |
+          test -f ../../modules/gestao-facturacao-produtos/versao-artifacts-2/IMPORT_MANIFEST.json
+          test -f ../../modules/gestao-facturacao-produtos/versao-artifacts-2/TREE.md
+          test -f public/index.html
+          test -f public/app.js
+          test -f Dockerfile
+      - name: Pack original ERP import and executable hospital web
+        working-directory: .
+        run: |
+          tar -czf ultracardio-hospital-operacional.tar.gz \
+            apps/hospital-operacional \
+            modules/gestao-facturacao-produtos/versao-artifacts-2
+          sha256sum ultracardio-hospital-operacional.tar.gz
+      - name: Provide downloadable release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ultracardio-hospital-operacional
+          path: ultracardio-hospital-operacional.tar.gz
+          retention-days: 30
