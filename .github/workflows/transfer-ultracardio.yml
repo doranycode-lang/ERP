@@ -1,0 +1,48 @@
+name: Transferencia ULTRACARDIO para ERP
+on:
+  push:
+    branches:
+      - import/ultracardio-completo
+    paths:
+      - .github/workflows/transfer-ultracardio.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ERP
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+      - name: Checkout codigo fonte ULTRACARDIO
+        uses: actions/checkout@v4
+        with:
+          repository: doranycode-lang/ultracardio-erp
+          ref: main
+          path: .transfer-source
+          token: ${{ github.token }}
+          persist-credentials: false
+      - name: Copiar versao integral sem tocar main
+        run: |
+          set -eu
+          test -f .transfer-source/apps/hospital-operacional/package.json
+          test -f .transfer-source/modules/gestao-facturacao-produtos/versao-artifacts-2/IMPORT_MANIFEST.json
+          mkdir -p docs
+          cp README.md docs/README-ERP-ANTERIOR.md
+          SRC_SHA=$(git -C .transfer-source rev-parse HEAD)
+          cp -a .transfer-source/. .
+          rm -rf .transfer-source
+          cat > docs/TRANSFERENCIA-ULTRACARDIO-ERP.md <<EOF
+          # Transferência integral ULTRACARDIO ERP
+          Origem: doranycode-lang/ultracardio-erp, commit $SRC_SHA.
+          Destino: doranycode-lang/ERP, branch de revisão import/ultracardio-completo.
+          Foi preservado o README do repositório ERP em docs/README-ERP-ANTERIOR.md.
+          Não faz deploy nem mexe em base de produção.
+          EOF
+          git add -A
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git diff --cached --quiet || (git commit -m "feat(erp): transferir integralmente codigo ULTRACARDIO e app hospitalar" && git push origin HEAD:import/ultracardio-completo)
