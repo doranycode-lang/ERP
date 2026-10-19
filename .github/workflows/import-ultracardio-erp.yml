@@ -4,7 +4,6 @@ on:
     branches:
       - import/ultracardio-completo
     paths:
-      - 'transfer/chunks/**'
       - 'transfer/manifest.json'
   workflow_dispatch:
 permissions:
