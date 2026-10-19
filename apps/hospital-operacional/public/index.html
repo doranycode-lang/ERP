@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-AO">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ULTRACARDIO · Gestão Hospitalar</title>
+<link rel="stylesheet" href="/style.css"></head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">✚</span><span><strong>ULTRACARDIO</strong><small>ERP Hospitalar · Operacional</small></span></div>
+  <div class="top-actions" id="top-actions" hidden>
+    <label class="hospital-label">Unidade <select id="hospital-select" aria-label="Unidade hospitalar"></select></label>
+    <span id="account"></span><button class="ghost light" id="logout">Sair</button>
+  </div>
+</header>
+<section class="login-wrap" id="login-screen">
+  <div class="login-card">
+    <span class="kicker">ACESSO AUTORIZADO</span><h1>Sistema de Gestão Hospitalar</h1>
+    <p>Introduza as credenciais de uma conta criada pelo administrador da unidade.</p>
+    <form id="login-form">
+      <label>Email institucional<input type="email" name="email" autocomplete="username" required></label>
+      <label>Palavra-passe<input type="password" name="password" autocomplete="current-password" required></label>
+      <button class="primary fill" type="submit">Entrar no sistema</button>
+    </form>
+    <p class="muted">Não há registo público. Dados clínicos reais só após homologação técnica e de segurança.</p>
+  </div>
+</section>
+<div class="layout" id="workspace" hidden>
+  <aside class="sidebar"><span class="nav-title">ÁREAS DO HOSPITAL</span>
+    <nav id="navigation" aria-label="Navegação principal">
+      <button data-view="dashboard" class="active">▦ Painel geral</button>
+      <button data-view="hospitals">▥ Unidades hospitalares</button>
+      <button data-view="patients">♧ Pacientes</button>
+      <button data-view="partners">▤ Seguradoras / parceiros</button>
+      <button data-view="coverages">◈ Coberturas / assegurados</button>
+      <button data-view="encounters">◉ Consultas / episódios</button>
+      <button data-view="appointments">◷ Agenda / marcações</button>
+      <button data-view="triage">♡ Triagem</button>
+      <button data-view="nursing">✎ Enfermagem</button>
+      <button data-view="lab-orders">⚗ Laboratório</button>
+      <button data-view="products">▣ Produtos / stock</button>
+      <button data-view="stock-movements">↔ Movimentos de stock</button>
+      <button data-view="dispensations">▣ Dispensa de produtos</button>
+      <button data-view="service-entries">▤ Serviços e encargos</button>
+      <button data-view="patient-payments">✓ Pagamentos pacientes</button>
+      <button data-view="partner-payments">✓ Pagamentos parceiros</button>
+      <button data-view="patient-statement">▤ Extracto de paciente</button>
+      <button data-view="partner-collections">▤ Cobrança a parceiros</button>
+      <button data-view="users">♙ Utilizadores e funções</button>
+      <button data-view="audit-events">⌕ Auditoria</button>
+    </nav>
+    <div class="sidebar-bottom">Sem dados de demonstração.<br>Operações persistidas na base local.<br><strong>Facturação fiscal AGT desactivada.</strong></div>
+  </aside>
+  <main class="main">
+    <div class="pagehead"><div><span class="kicker" id="eyebrow">ULTRACARDIO ERP</span><h1 id="view-title">Painel geral</h1><p class="muted" id="view-description">Dados directamente da base de dados.</p></div>
+      <div class="page-actions" id="page-actions"></div>
+    </div>
+    <div id="flash" class="flash" role="status" hidden></div>
+    <div id="content" aria-live="polite"></div>
+  </main>
+</div>
+<footer>ULTRACARDIO · Plataforma hospitalar em homologação técnica · Documentos de cobrança internos não são facturas fiscais.</footer>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

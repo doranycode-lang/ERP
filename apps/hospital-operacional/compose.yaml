@@ -1,0 +1,15 @@
+services:
+  hospital:
+    build: .
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      HOSPITAL_DATABASE_FILE: /app/data/hospital.sqlite
+      APP_ORIGIN: ${APP_ORIGIN:?Defina o URL HTTPS publico com certificado TLS}
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - hospital_data:/app/data
+volumes:
+  hospital_data:
