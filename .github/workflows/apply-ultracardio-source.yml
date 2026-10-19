@@ -16,7 +16,7 @@ jobs:
           persist-credentials: true
       - name: Receber pacote temporario validado do repositório privado
         env:
-          SNAPSHOT_URL: 'https://sdmntpritalynorth.oaiusercontent.com/files/00000000-db68-8246-8868-cfb23ba4afbd/raw?se=2026-10-19T12%3A02%3A53Z&sp=r&sv=2026-02-06&sr=b&scid=60e57b8f-301b-5d75-b7f3-a1323c08d8b2&skoid=0a4a0f0c-99ac-4752-9d87-cfac036fa93f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-19T08%3A53%3A00Z&ske=2026-10-20T08%3A53%3A00Z&sks=b&skv=2026-02-06&sig=16V%2BwT39aApFttDfvijPnEDyY3nTdFBLN6q0JaAdbg4%3D'
+          SNAPSHOT_URL: 'https://sdmntpritalynorth.oaiusercontent.com/files/00000000-dbc8-8246-8050-a07617efc0d2/raw?se=2026-10-19T12%3A05%3A04Z&sp=r&sv=2026-02-06&sr=b&scid=5348163f-e638-5926-8419-0adaeda6e363&skoid=0a4a0f0c-99ac-4752-9d87-cfac036fa93f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-18T13%3A09%3A13Z&ske=2026-10-19T13%3A09%3A13Z&sks=b&skv=2026-02-06&sig=ve8fTyFYeD7IOm%2BRMe2IR1IwBb0OKd67i3%2BAYxFef2c%3D'
         run: |
           set -euo pipefail
           curl --fail --location --retry 3 --silent --show-error "$SNAPSHOT_URL" -o /tmp/ultracardio-source.zip
@@ -51,6 +51,8 @@ jobs:
           Não utilizar dados reais de pacientes até validar segurança e isolamento.
           EOF
           git add -A
+          # Preserve original tracked build outputs, even if .gitignore excludes them.
+          git add -f -- modules/gestao-facturacao-produtos/versao-artifacts-2/
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git diff --cached --quiet || (git commit -m "feat(erp): importar versão integral do ULTRACARDIO mantendo toda a estrutura" && git push origin HEAD:import/ultracardio-completo)
