@@ -1,0 +1,2 @@
+- [Faturação LAB / AGT](billing-agt.md) — o BillingModule calcula IVA de 14% e usa hash fiscal composto no QR Code da fatura.
+- [Continuidade do ERP](erp-continuity.md) — avançar sobre a implementação actual e preservar os módulos e funcionalidades existentes.
